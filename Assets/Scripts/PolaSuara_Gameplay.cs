@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PolaSuara_Gameplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [System.Serializable]
+    public struct Bell
     {
-        
+        public PolaSuara_Bell bell;
+        public AudioClip clip;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] List<Bell> bell;
+
+
 }
