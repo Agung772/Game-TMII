@@ -15,6 +15,7 @@ public class DataGame : MonoBehaviour
     public float koin;
     public float tiket;
 
+    public Minigame minigame;
     public ListItem listItem;
     //
     public float fullScreen;
@@ -46,11 +47,13 @@ public class DataGame : MonoBehaviour
     [HideInInspector]
     //Pulau
     public string
-        _Sulawesi = "_Sulawesi",
-        _Kalimantan = "_Kalimantan",
-        _Jawa = "_Jawa",
-        _Sumatera = "_Sumatera",
-        _Papua = "_Papua";
+        _Sulawesi = "Sulawesi",
+        _Kalimantan = "Kalimantan",
+        _Jawa = "Jawa",
+        _Sumatera = "Sumatera",
+        _Papua = "Papua";
+
+
 
     private void Awake()
     {
@@ -88,6 +91,7 @@ public class DataGame : MonoBehaviour
         koin = PlayerPrefs.GetFloat(_Koin);
         tiket = PlayerPrefs.GetFloat(_Tiket);
 
+        minigame.LoadData();
 
         listItem.itemStored = new string[listItem.itemDatas.Length];
         for (int i = 0; i < listItem.itemDatas.Length; i++)
@@ -155,6 +159,7 @@ public class DataGame : MonoBehaviour
 
 
     }
+
     public void DeletaData()
     {
         nama = "";

@@ -21,6 +21,15 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            yield return new WaitForSeconds(1);
+        }
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Delete))

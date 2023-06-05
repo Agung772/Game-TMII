@@ -2657,6 +2657,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 5198710427663925113}
   - {fileID: 2456897459861285046}
   m_Father: {fileID: 3571528297823951035}
   m_RootOrder: 1
@@ -2679,16 +2680,17 @@ MonoBehaviour:
   provinsi: 
   koin: 0
   tiket: 0
+  minigame: {fileID: 7968634029528181653}
   listItem: {fileID: 8528935935452557512}
   fullScreen: 0
   sizeScreen: 0
   _FullScreen: _FullScreen
   _SizeScreen: _SizeScreen
-  _Sulawesi: _Sulawesi
-  _Kalimantan: _Kalimantan
-  _Jawa: _Jawa
-  _Sumatera: _Sumatera
-  _Papua: _Papua
+  _Sulawesi: Sulawesi
+  _Kalimantan: Kalimantan
+  _Jawa: Jawa
+  _Sumatera: Sumatera
+  _Papua: Papua
 --- !u!1 &4476988131109426531
 GameObject:
   m_ObjectHideFlags: 0
@@ -4951,7 +4953,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9041386598369228203}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8528935935452557512
 MonoBehaviour:
@@ -5706,6 +5708,61 @@ RectTransform:
   m_AnchoredPosition: {x: 385.711, y: -210}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &8758475709965994439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5198710427663925113}
+  - component: {fileID: 7968634029528181653}
+  m_Layer: 0
+  m_Name: Minigame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5198710427663925113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758475709965994439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9041386598369228203}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7968634029528181653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758475709965994439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc090b952994fd148b7c98373db82f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score_KartuMemori: 0
+  score_PolaSuara: 0
+  score_DengarkanKata: 0
+  score_Perbandingnan: 0
+  score_LengkapiKata: 0
+  score_PilihanGanda: 0
+  _KartuMemori: _KartuMemori
+  _PolaSuara: _PolaSuara
+  _DengarkanKata: _DengarkanKata
+  _Perbandingnan: _Perbandingnan
+  _LengkapiKata: _LengkapiKata
+  _PilihanGanda: _PilihanGanda
 --- !u!1 &8879831709233275151
 GameObject:
   m_ObjectHideFlags: 0
