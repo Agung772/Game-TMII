@@ -21,6 +21,8 @@ public class PolaSuara_Bell : MonoBehaviour
                 AudioManager.instance.SFXAudioSource.PlayOneShot(suaraBell);
                 efectBunyi.SetActive(true);
                 yield return new WaitForSeconds(2);
+
+                PolaSuara_Gameplay.instance.CheckBell(codeBell);
                 efectBunyi.SetActive(false);
                 cooldown = false;
             }

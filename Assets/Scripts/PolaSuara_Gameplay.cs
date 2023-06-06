@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PolaSuara_Gameplay : MonoBehaviour
 {
+    public static PolaSuara_Gameplay instance;
     [System.Serializable] struct Soal
     {
         public int[] urutan;
@@ -21,6 +22,10 @@ public class PolaSuara_Gameplay : MonoBehaviour
     public GameObject bellParent;
     [SerializeField] PolaSuara_Bell[] bell;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         if (DataGame.instance.pulau == DataGame.instance._Sumatera)
@@ -38,16 +43,7 @@ public class PolaSuara_Gameplay : MonoBehaviour
             }
         }
     }
-
-    public bool cd;
-    private void Update()
-    {
-        if (cd)
-        {
-            cd = false;
-            StartSoal();
-        }
-    }
+    
     public int totalBunyi;
     public int urutanBunyi;
     public void StartSoal()
@@ -58,8 +54,11 @@ public class PolaSuara_Gameplay : MonoBehaviour
             soalIndex++;
             PolaSuara_UI.instance.soalText.text = soalIndex.ToString();
 
+            PolaSuara_UI.instance.putarSuaraButton.gameObject.SetActive(false);
+
             urutanBunyi = 0;
             totalBunyi = soal[soalIndex].urutan.Length;
+            totalCheck = soal[soalIndex].urutan.Length;
 
             PlayBell();
 
@@ -106,8 +105,23 @@ public class PolaSuara_Gameplay : MonoBehaviour
         }
     }
 
-    public void CheckBell()
+    int urutanCheck;
+    int totalCheck;
+    public void CheckBell(int codeBell)
     {
-
+        urutanCheck++;
+        if (totalCheck > 0)
+        {
+            totalCheck--;
+            if (codeBell == soal[soalIndex].urutan[urutanCheck])
+            {
+                print("Bell benar");
+                PolaSuara_UI.instance.putarSuaraButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                print("Bell salah");
+            }
+        }
     }
 }

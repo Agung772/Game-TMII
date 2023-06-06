@@ -11,7 +11,10 @@ public class PolaSuara_UI : MonoBehaviour
     public TextMeshProUGUI notifText;
     public TextMeshProUGUI soalText;
 
+    public GameObject putarSuaraButton;
+
     public GameObject bellSumatera;
+
 
 
 
