@@ -28,6 +28,8 @@ public class PolaSuara_Gameplay : MonoBehaviour
     }
     private void Start()
     {
+        PolaSuara_UI.instance.notifText.text = "TEKAN PUTAR SUARA UNTUK MENDENGARKAN MELODI";
+
         if (DataGame.instance.pulau == DataGame.instance._Sumatera)
         {
             bellParent = PolaSuara_UI.instance.bellSumatera;
@@ -42,6 +44,9 @@ public class PolaSuara_Gameplay : MonoBehaviour
                 bell[i] = bellParent.transform.GetChild(i - 1).GetComponent<PolaSuara_Bell>();
             }
         }
+
+        soalIndex++;
+        PolaSuara_UI.instance.soalText.text = "0" + soalIndex;
     }
     
     public int totalBunyi;
@@ -51,12 +56,10 @@ public class PolaSuara_Gameplay : MonoBehaviour
         StartCoroutine(Coroutine());
         IEnumerator Coroutine()
         {
-            soalIndex++;
-            PolaSuara_UI.instance.soalText.text = soalIndex.ToString();
-
             PolaSuara_UI.instance.putarSuaraButton.gameObject.SetActive(false);
 
             urutanBunyi = 0;
+            urutanCheck = 0;
             totalBunyi = soal[soalIndex].urutan.Length;
             totalCheck = soal[soalIndex].urutan.Length;
 
@@ -109,18 +112,31 @@ public class PolaSuara_Gameplay : MonoBehaviour
     int totalCheck;
     public void CheckBell(int codeBell)
     {
-        urutanCheck++;
         if (totalCheck > 0)
         {
-            totalCheck--;
+            print("soalIndex " + soalIndex + " urutanCheck " + urutanCheck);
             if (codeBell == soal[soalIndex].urutan[urutanCheck])
             {
-                print("Bell benar");
-                PolaSuara_UI.instance.putarSuaraButton.gameObject.SetActive(true);
+                urutanCheck++;
+                totalCheck--;
+                if (totalCheck == 0)
+                {
+                    print("Bell benar");
+                    PolaSuara_UI.instance.putarSuaraButton.gameObject.SetActive(true);
+                    PolaSuara_UI.instance.notifText.text = "KAMU BENAR, PUTAR SUARA UNTUK SOAL SELANJUTNYA";
+
+                    //Update UI
+                    soalIndex++;
+                    PolaSuara_UI.instance.soalText.text = "0" + soalIndex;
+                }
+
             }
             else
             {
+                urutanCheck = 0;
+                totalCheck = soal[soalIndex].urutan.Length;
                 print("Bell salah");
+                PolaSuara_UI.instance.notifText.text = "MELODI YANG KAMU TEKAN SALAH, TEKAN ULANG MELODI DARI AWAL";
             }
         }
     }

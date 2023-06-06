@@ -209,7 +209,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 217908262}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2018086292}
+        m_TargetAssemblyTypeName: PolaSuara_Gameplay, Assembly-CSharp
+        m_MethodName: StartSoal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &217908262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,6 +565,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7438665496885988310, guid: e1c12bc42a04e9d4fa39090a230bd7fd, type: 3}
+      propertyPath: codeBell
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438665496885988310, guid: e1c12bc42a04e9d4fa39090a230bd7fd, type: 3}
       propertyPath: suaraBell
       value: 
       objectReference: {fileID: 8300000, guid: eab317128faa11a4d92c58a878ac013c, type: 3}
@@ -684,6 +700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notifText: {fileID: 475368482}
   soalText: {fileID: 823854857}
+  putarSuaraButton: {fileID: 217908259}
   bellSumatera: {fileID: 793150811}
 --- !u!1 &793150811
 GameObject:
@@ -1233,6 +1250,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7438665496885988310, guid: e1c12bc42a04e9d4fa39090a230bd7fd, type: 3}
+      propertyPath: codeBell
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438665496885988310, guid: e1c12bc42a04e9d4fa39090a230bd7fd, type: 3}
       propertyPath: suaraBell
       value: 
       objectReference: {fileID: 8300000, guid: 7ea1abc8cc7449a47b78909ad994ce52, type: 3}
@@ -1530,6 +1551,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7438665496885988310, guid: e1c12bc42a04e9d4fa39090a230bd7fd, type: 3}
+      propertyPath: codeBell
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438665496885988310, guid: e1c12bc42a04e9d4fa39090a230bd7fd, type: 3}
       propertyPath: suaraBell
       value: 
       objectReference: {fileID: 8300000, guid: c6e97b3773c41214bbfc516e5848d4cb, type: 3}
@@ -1710,7 +1735,6 @@ MonoBehaviour:
   - urutan: 0300000004000000010000000200000001000000
   bellParent: {fileID: 0}
   bell: []
-  cd: 0
   totalBunyi: 0
   urutanBunyi: 0
 --- !u!4 &2018086293
@@ -1944,6 +1968,10 @@ PrefabInstance:
     - target: {fileID: 7438665496885988299, guid: e1c12bc42a04e9d4fa39090a230bd7fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7438665496885988310, guid: e1c12bc42a04e9d4fa39090a230bd7fd, type: 3}
+      propertyPath: codeBell
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7438665496885988310, guid: e1c12bc42a04e9d4fa39090a230bd7fd, type: 3}
       propertyPath: suaraBell
