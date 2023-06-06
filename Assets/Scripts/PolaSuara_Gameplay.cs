@@ -10,7 +10,9 @@ public class PolaSuara_Gameplay : MonoBehaviour
     {
         public int[] urutan;
     }
+    [SerializeField] int nyawa;
 
+    [Space]
     [SerializeField] int soalIndex;
     [SerializeField] int totalBell;
     [SerializeField] Soal[] soal;
@@ -53,20 +55,33 @@ public class PolaSuara_Gameplay : MonoBehaviour
         StartCoroutine(Coroutine());
         IEnumerator Coroutine()
         {
-            CekBell(true);
             soalIndex++;
-            yield return new WaitForSeconds(1);
+            PolaSuara_UI.instance.soalText.text = soalIndex.ToString();
+
+            urutanBunyi = 0;
+            totalBunyi = soal[soalIndex].urutan.Length;
+
+            PlayBell();
+
+            CekBell(true);
+            yield return new WaitForSeconds(soalIndex * 2);
             CekBell(false);
         }
 
-
-
-
         void PlayBell()
         {
-            for (int i = 0; i < soal[soalIndex].urutan.Length; i++)
-            {
+            bell[soal[soalIndex].urutan[urutanBunyi]].StartBell();
 
+            if (totalBunyi > 1)
+            {
+                StartCoroutine(Coroutine());
+                IEnumerator Coroutine()
+                {
+                    yield return new WaitForSeconds(2);
+                    urutanBunyi++;
+                    totalBunyi--;
+                    PlayBell();
+                }
             }
         }
         void CekBell(bool value)
@@ -78,6 +93,15 @@ public class PolaSuara_Gameplay : MonoBehaviour
                     bell[i].check = value;
                 }
 
+            }
+
+            if (value)
+            {
+                PolaSuara_UI.instance.notifText.text = "DENGARKAN MELODI";
+            }
+            else
+            {
+                PolaSuara_UI.instance.notifText.text = "TEKAN MELODI SESUAI DENGAN CLUE ";
             }
         }
     }

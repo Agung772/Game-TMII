@@ -683,6 +683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notifText: {fileID: 475368482}
+  soalText: {fileID: 823854857}
   bellSumatera: {fileID: 793150811}
 --- !u!1 &793150811
 GameObject:
@@ -1697,17 +1698,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac7acf9ae937c44da872e672e58db4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nyawa: 0
   soalIndex: 0
+  totalBell: 0
   soal:
   - urutan: 
-  - urutan: 0000000000000000000000000100000000000000
-  - urutan: 0000000000000000000000000100000002000000
-  - urutan: 0000000003000000000000000100000002000000
-  - urutan: 0000000003000000040000000100000002000000
-  - urutan: 0000000023000000040000000100000002000000
+  - urutan: 03000000
+  - urutan: 0300000004000000
+  - urutan: 030000000400000001000000
+  - urutan: 03000000040000000100000002000000
+  - urutan: 0300000004000000010000000200000001000000
   bellParent: {fileID: 0}
   bell: []
   cd: 0
+  totalBunyi: 0
+  urutanBunyi: 0
 --- !u!4 &2018086293
 Transform:
   m_ObjectHideFlags: 0
