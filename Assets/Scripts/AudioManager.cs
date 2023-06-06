@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
-    [SerializeField]
+    public
     AudioSource BGMAudioSource, SFXAudioSource;
 
     public float volumeBGM, volumeSFX;

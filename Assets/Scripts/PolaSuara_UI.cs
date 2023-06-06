@@ -10,6 +10,8 @@ public class PolaSuara_UI : MonoBehaviour
 
     public TextMeshProUGUI notifText;
 
+    public GameObject bellSumatera;
+
     private void Awake()
     {
         instance = this;
