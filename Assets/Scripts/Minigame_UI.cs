@@ -13,6 +13,10 @@ public class Minigame_UI : MonoBehaviour
     [SerializeField] Image tropiImage;
     [SerializeField] TextMeshProUGUI titleText;
 
+    [Space]
+    [SerializeField] GameObject miniscoreUI;
+    [SerializeField] Sprite ceklis, unceklis;
+    [SerializeField] Image miniscoreImage;
     private void Awake()
     {
         instance = this;
@@ -47,5 +51,29 @@ public class Minigame_UI : MonoBehaviour
         }
 
         DataGame.instance.minigame.SaveMinigame(namaMinigame, score);
+    }
+
+    public void MiniscoreUI(bool isBenar)
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            if (isBenar)
+            {
+                miniscoreUI.SetActive(true);
+                miniscoreImage.sprite = ceklis;
+                yield return new WaitForSeconds(1);
+                miniscoreUI.SetActive(false);
+            }
+            else
+            {
+                miniscoreUI.SetActive(true);
+                miniscoreImage.sprite = unceklis;
+                yield return new WaitForSeconds(1);
+                miniscoreUI.SetActive(false);
+            }
+
+        }
+
     }
 }
