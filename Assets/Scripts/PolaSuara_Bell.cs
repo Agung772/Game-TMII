@@ -9,10 +9,10 @@ public class PolaSuara_Bell : MonoBehaviour
     [SerializeField] AudioClip suaraBell;
     [SerializeField] GameObject efectBunyi;
 
-    public bool cooldown, check;
+    public bool cooldown, putarSuara, nonClick;
     public void ClickBell()
     {
-        if (!cooldown && !check)
+        if (!cooldown && !putarSuara && !nonClick)
         {
             cooldown = true;
             StartCoroutine(Coroutine());
@@ -20,13 +20,33 @@ public class PolaSuara_Bell : MonoBehaviour
             {
                 AudioManager.instance.SFXAudioSource.PlayOneShot(suaraBell);
                 efectBunyi.SetActive(true);
-                yield return new WaitForSeconds(2);
 
                 PolaSuara_Gameplay.instance.CheckBell(codeBell);
+                yield return new WaitForSeconds(2);
+
+
                 efectBunyi.SetActive(false);
                 cooldown = false;
             }
         }
+        else if (cooldown && putarSuara)
+        {
+            UIManager.instance.SpawnNotif("Kami sedang ngecek jawaban kamu");
+        }
+        else if (cooldown)
+        {
+            UIManager.instance.SpawnNotif("Sabar boss lagi cooldown");
+        }
+        else if (putarSuara)
+        {
+            UIManager.instance.SpawnNotif("Sebentar, Melodi sedang di putar");
+        }
+        else if (nonClick)
+        {
+            UIManager.instance.SpawnNotif("Tekan tombol putar suara untuk mengetahui soal");
+        }
+
+
     }
 
     public void StartBell()

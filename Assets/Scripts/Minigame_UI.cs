@@ -41,6 +41,10 @@ public class Minigame_UI : MonoBehaviour
             tropiImage.sprite = tropi[3];
             titleText.text = "HEBAT BENAR SEMUA!";
         }
+        else
+        {
+            titleText.text = "TERJADI KESALAHAN PADA SCORE, MINTA PADA PROGRAMMER UNTUK MEMPERBAIKI";
+        }
 
         DataGame.instance.minigame.SaveMinigame(namaMinigame, score);
     }

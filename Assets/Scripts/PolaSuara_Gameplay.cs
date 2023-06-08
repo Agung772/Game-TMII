@@ -11,7 +11,7 @@ public class PolaSuara_Gameplay : MonoBehaviour
     {
         public int[] urutan;
     }
-    [SerializeField] int nyawa;
+    [SerializeField] int nyawa, totalSoal;
 
     [Space]
     [SerializeField] int soalIndex;
@@ -47,69 +47,87 @@ public class PolaSuara_Gameplay : MonoBehaviour
 
         soalIndex++;
         PolaSuara_UI.instance.soalText.text = "0" + soalIndex;
+        PolaSuara_UI.instance.SetNyawa(nyawa);
+        NonClickBell(true);
     }
     
     public int totalBunyi;
     public int urutanBunyi;
     public void StartSoal()
     {
-        StartCoroutine(Coroutine());
-        IEnumerator Coroutine()
+        if (soalIndex == totalSoal + 1)
         {
-            PolaSuara_UI.instance.putarSuaraButton.gameObject.SetActive(false);
-
-            urutanBunyi = 0;
-            urutanCheck = 0;
-            totalBunyi = soal[soalIndex].urutan.Length;
-            totalCheck = soal[soalIndex].urutan.Length;
-
-            PlayBell();
-
-            CekBell(true);
-            yield return new WaitForSeconds(soalIndex * 2);
-            CekBell(false);
+            Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._PolaSuara, nyawa);
         }
-
-        void PlayBell()
+        else
         {
-            bell[soal[soalIndex].urutan[urutanBunyi]].StartBell();
-
-            if (totalBunyi > 1)
+            StartCoroutine(Coroutine());
+            IEnumerator Coroutine()
             {
-                StartCoroutine(Coroutine());
-                IEnumerator Coroutine()
-                {
-                    yield return new WaitForSeconds(2);
-                    urutanBunyi++;
-                    totalBunyi--;
-                    PlayBell();
-                }
-            }
-        }
-        void CekBell(bool value)
-        {
-            for (int i = 0; i < totalBell + 1; i++)
-            {
-                if (i != 0)
-                {
-                    bell[i].check = value;
-                }
+                PolaSuara_UI.instance.putarSuaraButton.gameObject.SetActive(false);
 
-            }
+                urutanBunyi = 0;
+                urutanCheck = 0;
+                totalBunyi = soal[soalIndex].urutan.Length;
+                totalCheck = soal[soalIndex].urutan.Length;
 
-            if (value)
-            {
+                PlayBell();
+
+                PutarSuara(true);
                 PolaSuara_UI.instance.notifText.text = "DENGARKAN MELODI";
-            }
-            else
-            {
+                yield return new WaitForSeconds(soalIndex * 2);
+                PutarSuara(false);
+                NonClickBell(false);
                 PolaSuara_UI.instance.notifText.text = "TEKAN MELODI SESUAI DENGAN CLUE ";
             }
+
+            void PlayBell()
+            {
+                bell[soal[soalIndex].urutan[urutanBunyi]].StartBell();
+
+                if (totalBunyi > 1)
+                {
+                    StartCoroutine(Coroutine());
+                    IEnumerator Coroutine()
+                    {
+                        yield return new WaitForSeconds(2);
+                        urutanBunyi++;
+                        totalBunyi--;
+                        PlayBell();
+                    }
+                }
+            }
+
+        }
+
+    }
+    void PutarSuara(bool value)
+    {
+        for (int i = 0; i < totalBell + 1; i++)
+        {
+            if (i != 0)
+            {
+                bell[i].putarSuara = value;
+            }
+
+        }
+    }
+    void NonClickBell(bool value)
+    {
+        for (int i = 0; i < totalBell + 1; i++)
+        {
+            if (i != 0)
+            {
+                bell[i].nonClick = value;
+            }
+
         }
     }
 
     int urutanCheck;
     int totalCheck;
+
+    int totalSalah;
     public void CheckBell(int codeBell)
     {
         if (totalCheck > 0)
@@ -119,15 +137,34 @@ public class PolaSuara_Gameplay : MonoBehaviour
             {
                 urutanCheck++;
                 totalCheck--;
+
+                PolaSuara_UI.instance.notifText.text = "TEKAN " + totalCheck + " MELODI LAGI";
                 if (totalCheck == 0)
                 {
                     print("Bell benar");
-                    PolaSuara_UI.instance.putarSuaraButton.gameObject.SetActive(true);
-                    PolaSuara_UI.instance.notifText.text = "KAMU BENAR, PUTAR SUARA UNTUK SOAL SELANJUTNYA";
 
                     //Update UI
                     soalIndex++;
-                    PolaSuara_UI.instance.soalText.text = "0" + soalIndex;
+
+                    //Semua soal terjawab
+                    if (soalIndex == totalSoal + 1)
+                    {
+                        StartCoroutine(Coroutine());
+                        IEnumerator Coroutine()
+                        {
+                            PolaSuara_UI.instance.notifText.text = "KAMU BENAR, SEMUA SOAL TELAH DIJAWAB";
+                            yield return new WaitForSeconds(3);
+                            Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._PolaSuara, nyawa);
+                        }
+                    }
+                    //Lanjut soal berikutnnya
+                    else
+                    {
+                        PolaSuara_UI.instance.soalText.text = "0" + soalIndex;
+                        PolaSuara_UI.instance.putarSuaraButton.gameObject.SetActive(true);
+                        PolaSuara_UI.instance.notifText.text = "KAMU BENAR, PUTAR SUARA UNTUK SOAL SELANJUTNYA";
+                        NonClickBell(true);
+                    }
                 }
 
             }
@@ -135,8 +172,30 @@ public class PolaSuara_Gameplay : MonoBehaviour
             {
                 urutanCheck = 0;
                 totalCheck = soal[soalIndex].urutan.Length;
+                totalSalah++;
                 print("Bell salah");
-                PolaSuara_UI.instance.notifText.text = "MELODI YANG KAMU TEKAN SALAH, TEKAN ULANG MELODI DARI AWAL";
+                if (totalSalah == 1)
+                {
+                    PolaSuara_UI.instance.notifText.text = "MELODI YANG KAMU TEKAN SALAH, TEKAN ULANG MELODI DARI AWAL";
+                }
+                else
+                {
+                    PolaSuara_UI.instance.notifText.text = "MELODI YANG KAMU TEKAN MASIH SALAH, KAMU UDAH SALAH " + totalSalah + " KALI";
+                }
+
+
+                nyawa--;
+                PolaSuara_UI.instance.SetNyawa(nyawa);
+                if (nyawa == 0)
+                {
+                    StartCoroutine(Coroutine());
+                    IEnumerator Coroutine()
+                    {
+                        yield return new WaitForSeconds(3);
+                        Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._PolaSuara, 0);
+                    }
+
+                }
             }
         }
     }
