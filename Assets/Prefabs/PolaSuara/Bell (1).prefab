@@ -132,7 +132,8 @@ MonoBehaviour:
   suaraBell: {fileID: 0}
   efectBunyi: {fileID: 5803567286287089497}
   cooldown: 0
-  check: 0
+  putarSuara: 0
+  nonClick: 0
 --- !u!222 &7438665496885988311
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 906e25d0c7265c046a633b0b1efb41b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1e030092f808ced44981496c87b5ad48, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
