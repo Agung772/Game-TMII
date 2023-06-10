@@ -11,6 +11,7 @@ public class DataGame : MonoBehaviour
 
     public string pulau;
     public string provinsi;
+    public float codeTugu;
 
     public float koin;
     public float tiket;
@@ -32,6 +33,7 @@ public class DataGame : MonoBehaviour
 
         _Pulau = "_Pulau",
         _Provinsi = "_Provinsi",
+        _CodeTugu = "_CodeTugu",
 
         _Koin = "_Koin",
         _Tiket = "_Tiket",
@@ -87,6 +89,7 @@ public class DataGame : MonoBehaviour
 
         pulau = PlayerPrefs.GetString(_Pulau);
         provinsi = PlayerPrefs.GetString(_Provinsi);
+        codeTugu = PlayerPrefs.GetFloat(_CodeTugu);
 
         koin = PlayerPrefs.GetFloat(_Koin);
         tiket = PlayerPrefs.GetFloat(_Tiket);
@@ -125,6 +128,12 @@ public class DataGame : MonoBehaviour
     {
         PlayerPrefs.SetString(_Pulau, pulauTemp);
         pulau = pulauTemp;
+    }
+    public void SaveCodeTugu(float value)
+    {
+        PlayerPrefs.SetFloat(_CodeTugu, value);
+
+        LoadData();
     }
 
     public void AddKoin(float value)
@@ -176,6 +185,7 @@ public class DataGame : MonoBehaviour
 
         PlayerPrefs.DeleteKey(_Pulau);
         PlayerPrefs.DeleteKey(_Provinsi);
+        PlayerPrefs.DeleteKey(_CodeTugu);
 
         PlayerPrefs.DeleteKey(_Koin);
         PlayerPrefs.DeleteKey(_Tiket);

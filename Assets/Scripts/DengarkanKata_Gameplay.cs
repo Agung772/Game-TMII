@@ -29,6 +29,7 @@ public class DengarkanKata_Gameplay : MonoBehaviour
         //DengarkanKata_UI.instance.inputJawaban.interactable = false;
         DengarkanKata_UI.instance.soalText.text = "0" + soalIndex;
         DengarkanKata_UI.instance.SetNyawa(nyawa);
+        DengarkanKata_UI.instance.inputJawaban.interactable = false;
     }
 
     bool cdSoal;
@@ -79,6 +80,7 @@ public class DengarkanKata_Gameplay : MonoBehaviour
                 Minigame_UI.instance.MiniscoreUI(true);
                 //DengarkanKata_UI.instance.inputJawaban.interactable = false;
                 DengarkanKata_UI.instance.inputJawaban.text = null;
+                DengarkanKata_UI.instance.inputJawaban.interactable = false;
             }
         }
         else if (value == "")

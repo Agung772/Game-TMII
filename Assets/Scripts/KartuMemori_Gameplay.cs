@@ -31,11 +31,11 @@ public class KartuMemori_Gameplay : MonoBehaviour
         print(DataGame.instance._Sumatera);
         if (DataGame.instance.pulau == DataGame.instance._Sumatera)
         {
-            kartuParent = KartuMemori_UI.instance.kartuSumatera;
+            kartuParent = KartuMemori_UI.instance.kartuTugu[(int)DataGame.instance.codeTugu];
         }
         kartuParent.SetActive(true);
         totalKartu = kartuParent.transform.childCount;
-        KartuMemori_UI.instance.totalSelesaiText.text = totalSelesai.ToString();
+        KartuMemori_UI.instance.totalSelesaiText.text = "0" + totalSelesai.ToString();
 
         RandomKartu();
     }
@@ -129,7 +129,7 @@ public class KartuMemori_Gameplay : MonoBehaviour
                     SetCheck(false);
 
                     totalSelesai++;
-                    KartuMemori_UI.instance.totalSelesaiText.text = totalSelesai.ToString();
+                    KartuMemori_UI.instance.totalSelesaiText.text = "0" + totalSelesai.ToString();
                     //Selesai semua
                     if (totalSelesai == totalKartu / 2)
                     {

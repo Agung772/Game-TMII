@@ -10,7 +10,7 @@ public class KartuMemori_UI : MonoBehaviour
     public TextMeshProUGUI gameTimeText;
     public TextMeshProUGUI totalSelesaiText;
 
-    public GameObject kartuSumatera;
+    public GameObject[] kartuTugu;
     private void Awake()
     {
         instance = this;
