@@ -28,6 +28,10 @@ public class KartuMemori_Gameplay : MonoBehaviour
 
     private void Start()
     {
+        for (int i = 0; i < KartuMemori_UI.instance.kartuTugu[1].transform.parent.childCount; i++)
+        {
+            KartuMemori_UI.instance.kartuTugu[1].transform.parent.GetChild(i).gameObject.SetActive(false);
+        }
         print(DataGame.instance._Sumatera);
         if (DataGame.instance.pulau == DataGame.instance._Sumatera)
         {

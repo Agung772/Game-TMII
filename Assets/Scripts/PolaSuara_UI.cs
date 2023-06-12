@@ -13,7 +13,8 @@ public class PolaSuara_UI : MonoBehaviour
 
     public GameObject putarSuaraButton;
 
-    public GameObject bellSumatera;
+    public PolaSuara_Soal[] tuguSoal;
+    public GameObject[] tuguBell;
 
 
 

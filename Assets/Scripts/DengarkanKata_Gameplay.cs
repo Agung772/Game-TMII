@@ -9,7 +9,7 @@ public class DengarkanKata_Gameplay : MonoBehaviour
 
     [SerializeField] int nyawa;
 
-    [SerializeField] DengarkanKata_Soal sumatera;
+    [SerializeField] DengarkanKata_Soal[] tugu;
     DengarkanKata_Soal soal;
 
     public int soalIndex;
@@ -20,11 +20,18 @@ public class DengarkanKata_Gameplay : MonoBehaviour
     }
     private void Start()
     {
-        if (DataGame.instance.pulau == DataGame.instance._Sumatera)
+        for (int i = 0; i < tugu[1].transform.parent.childCount; i++)
         {
-            soal = sumatera;
+            tugu[1].transform.parent.GetChild(i).gameObject.SetActive(false);
         }
 
+        //Start
+        if (DataGame.instance.pulau == DataGame.instance._Sumatera)
+        {
+            soal = tugu[(int)DataGame.instance.codeTugu];
+        }
+
+        soal.gameObject.SetActive(true);
         soalIndex++;
         //DengarkanKata_UI.instance.inputJawaban.interactable = false;
         DengarkanKata_UI.instance.soalText.text = "0" + soalIndex;

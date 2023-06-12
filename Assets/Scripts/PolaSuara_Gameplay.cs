@@ -16,10 +16,10 @@ public class PolaSuara_Gameplay : MonoBehaviour
     [Space]
     [SerializeField] int soalIndex;
     [SerializeField] int totalBell;
-    [SerializeField] Soal[] soal;
 
-
+    PolaSuara_Soal soal;
     public GameObject bellParent;
+
     [SerializeField] PolaSuara_Bell[] bell;
 
     private void Awake()
@@ -28,12 +28,25 @@ public class PolaSuara_Gameplay : MonoBehaviour
     }
     private void Start()
     {
+        for (int i = 0; i < PolaSuara_UI.instance.tuguSoal[1].transform.parent.childCount; i++)
+        {
+            PolaSuara_UI.instance.tuguSoal[1].transform.parent.GetChild(i).gameObject.SetActive(false);
+        }
+        for (int i = 0; i < PolaSuara_UI.instance.tuguBell[1].transform.parent.childCount; i++)
+        {
+            PolaSuara_UI.instance.tuguBell[1].transform.parent.GetChild(i).gameObject.SetActive(false);
+        }
+
         PolaSuara_UI.instance.notifText.text = "TEKAN PUTAR SUARA UNTUK MENDENGARKAN MELODI";
 
         if (DataGame.instance.pulau == DataGame.instance._Sumatera)
         {
-            bellParent = PolaSuara_UI.instance.bellSumatera;
+            soal = PolaSuara_UI.instance.tuguSoal[(int)DataGame.instance.codeTugu];
+            bellParent = PolaSuara_UI.instance.tuguBell[(int)DataGame.instance.codeTugu];
         }
+
+        soal.gameObject.SetActive(true);
+        bellParent.SetActive(true);
 
         totalBell = bellParent.transform.childCount;
         bell = new PolaSuara_Bell[totalBell + 1];
@@ -68,8 +81,8 @@ public class PolaSuara_Gameplay : MonoBehaviour
 
                 urutanBunyi = 0;
                 urutanCheck = 0;
-                totalBunyi = soal[soalIndex].urutan.Length;
-                totalCheck = soal[soalIndex].urutan.Length;
+                totalBunyi = soal.soalList[soalIndex].urutan.Length;
+                totalCheck = soal.soalList[soalIndex].urutan.Length;
 
                 PlayBell();
 
@@ -83,7 +96,7 @@ public class PolaSuara_Gameplay : MonoBehaviour
 
             void PlayBell()
             {
-                bell[soal[soalIndex].urutan[urutanBunyi]].StartBell();
+                bell[soal.soalList[soalIndex].urutan[urutanBunyi]].StartBell();
 
                 if (totalBunyi > 1)
                 {
@@ -133,7 +146,7 @@ public class PolaSuara_Gameplay : MonoBehaviour
         if (totalCheck > 0)
         {
             print("soalIndex " + soalIndex + " urutanCheck " + urutanCheck);
-            if (codeBell == soal[soalIndex].urutan[urutanCheck])
+            if (codeBell == soal.soalList[soalIndex].urutan[urutanCheck])
             {
                 urutanCheck++;
                 totalCheck--;
@@ -171,7 +184,7 @@ public class PolaSuara_Gameplay : MonoBehaviour
             else
             {
                 urutanCheck = 0;
-                totalCheck = soal[soalIndex].urutan.Length;
+                totalCheck = soal.soalList[soalIndex].urutan.Length;
                 totalSalah++;
                 print("Bell salah");
                 if (totalSalah == 1)
