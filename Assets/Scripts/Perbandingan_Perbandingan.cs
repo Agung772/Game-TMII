@@ -31,7 +31,7 @@ public class Perbandingan_Perbandingan : MonoBehaviour
             GetComponent<RectTransform>().position = Input.mousePosition;
         }
 
-        if (Vector3.Distance(GetComponent<RectTransform>().position, tempatPerbandinganRT.position) < 15)
+        if (Vector3.Distance(GetComponent<RectTransform>().position, tempatPerbandinganRT.position) < 55)
         {
             tempatPerbandingan = true;
         }
@@ -74,6 +74,9 @@ public class Perbandingan_Perbandingan : MonoBehaviour
                 {
                     tempatPerbandinganSC.perbandingan = Perbandingan_TempatPerbandingan.JenisPerbandingan.LebihKecil;
                 }
+
+                //Check
+                Perbandingan_Gameplay.instance.CheckHasil();
             }
             else
             {
@@ -81,5 +84,12 @@ public class Perbandingan_Perbandingan : MonoBehaviour
             }
         }
 
+    }
+
+    public void ResetPerbandingan()
+    {
+        var tempatPerbandinganSC = Perbandingan_TempatPerbandingan.instance;
+        tempatPerbandinganSC.perbandingan = Perbandingan_TempatPerbandingan.JenisPerbandingan.Null;
+        GetComponent<RectTransform>().position = posisiAwal;
     }
 }

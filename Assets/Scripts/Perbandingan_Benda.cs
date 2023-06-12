@@ -5,35 +5,20 @@ using UnityEngine;
 public class Perbandingan_Benda : MonoBehaviour
 {
     public bool kanan;
-    bool tempatBenda;
-    bool click;
+    public bool tempatBenda;
+    public bool click;
 
-    RectTransform tempatBendaRT;
+    Vector3 posisiAwal;
+    public Perbandingan_TempatBenda tempatBendaSC;
     private void Start()
     {
-        Perbandingan_TempatBenda[] temp = FindObjectsOfType<Perbandingan_TempatBenda>();
-        for (int i = 0; i < temp.Length; i++)
-        {
-            if (kanan && temp[i].kanan)
-            {
-                tempatBendaRT = temp[i].GetComponent<RectTransform>();
-            }
-            else if (!kanan && !temp[i].kanan)
-            {
-                tempatBendaRT = temp[i].GetComponent<RectTransform>();
-            }
-        }
-
+        posisiAwal = GetComponent<RectTransform>().position;
     }
     private void Update()
     {
-        if (Vector3.Distance(GetComponent<RectTransform>().position, tempatBendaRT.position) < 15)
+        if (click)
         {
-            tempatBenda = true;
-        }
-        else
-        {
-            tempatBenda = false;
+            GetComponent<RectTransform>().position = Input.mousePosition;
         }
     }
 
@@ -42,6 +27,16 @@ public class Perbandingan_Benda : MonoBehaviour
         if (value)
         {
             click = true;
+
+            tempatBendaSC.jumlahBenda--;
+            for (int i = 0; i < tempatBendaSC.posisiBenda.Length; i++)
+            {
+                if (tempatBendaSC.benda[i] == gameObject)
+                {
+                    tempatBendaSC.benda[i] = null;
+                }
+
+            }
         }
         else
         {
@@ -49,12 +44,42 @@ public class Perbandingan_Benda : MonoBehaviour
 
             if (tempatBenda)
             {
+                tempatBendaSC.jumlahBenda++;
+                for (int i = 0; i < tempatBendaSC.posisiBenda.Length; i++)
+                {
+                    if (tempatBendaSC.benda[i] == null)
+                    {
+                        tempatBendaSC.benda[i] = gameObject;
+                        GetComponent<RectTransform>().position = tempatBendaSC.posisiBenda[i].position;
+                        break;
+                    }
 
+                }
             }
+
             else
             {
-
+                Destroy(gameObject);
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Perbandingan_TempatBenda>())
+        {
+            if (collision.GetComponent<Perbandingan_TempatBenda>().kanan == kanan)
+            {
+                tempatBenda = true;
+            }
+
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Perbandingan_TempatBenda>())
+        {
+            tempatBenda = false;
         }
     }
 }

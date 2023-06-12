@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Perbandingan_UI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static Perbandingan_UI instance;
 
-    // Update is called once per frame
-    void Update()
+    public TextMeshProUGUI jumlahSoalText;
+
+    public TextMeshProUGUI bendaKananText;
+    public TextMeshProUGUI bendaKiriText;
+    private void Awake()
     {
-        
+        instance = this;
     }
 }
