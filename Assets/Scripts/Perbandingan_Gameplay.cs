@@ -6,6 +6,7 @@ public class Perbandingan_Gameplay : MonoBehaviour
 {
     public static Perbandingan_Gameplay instance;
 
+    public int nyawa;
     public int soalIndex;
 
     [SerializeField]Perbandingan_Soal[] tugu;
@@ -31,6 +32,11 @@ public class Perbandingan_Gameplay : MonoBehaviour
             soal = tugu[(int)DataGame.instance.codeTugu];
         }
 
+
+        Perbandingan_UI.instance.SetNyawa(nyawa);
+        Perbandingan_UI.instance.screenText.text = "Letakkan buah";
+
+        Perbandingan(false);
         StartSoal();
     }
 
@@ -38,7 +44,7 @@ public class Perbandingan_Gameplay : MonoBehaviour
     {
         if (soalIndex == soal.soal.Length - 1)
         {
-
+            Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._Perbandingnan, nyawa);
         }
         else
         {
@@ -79,6 +85,14 @@ public class Perbandingan_Gameplay : MonoBehaviour
             StartCoroutine(Coroutine());
             IEnumerator Coroutine()
             {
+                nyawa--;
+                Perbandingan_UI.instance.SetNyawa(nyawa);
+                if (nyawa == 0)
+                {
+                    Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._Perbandingnan, nyawa);
+                }
+
+
                 Minigame_UI.instance.MiniscoreUI(false);
                 yield return new WaitForSeconds(1);
                 Reset();
@@ -101,6 +115,40 @@ public class Perbandingan_Gameplay : MonoBehaviour
             {
                 tempPerbandingan[i].ResetPerbandingan();
             }
+
+            Perbandingan_UI.instance.screenText.text = "Letakkan buah";
+            Perbandingan(false);
+            kanan = false;
+            kiri = false;
+        }
+    }
+
+
+    bool kanan, kiri;
+    public void UseBenda(bool value)
+    {
+        if (value)
+        {
+            kanan = true;
+        }
+        else
+        {
+            kiri = true;
+        }
+
+        if (kanan && kiri)
+        {
+            Perbandingan(true);
+            Perbandingan_UI.instance.screenText.text = "Letakkan tanda perbandingan";
+        }
+    }
+
+    void Perbandingan(bool value)
+    {
+        Perbandingan_Perbandingan[] temp = FindObjectsOfType<Perbandingan_Perbandingan>();
+        for (int i = 0; i < temp.Length; i++)
+        {
+            temp[i].enabled = value;
         }
     }
 }

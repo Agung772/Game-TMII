@@ -50,6 +50,8 @@ public class Perbandingan_BendaManager : MonoBehaviour
                     Destroy(bendaSC.gameObject);
                 }
             }
+
+            Perbandingan_Gameplay.instance.UseBenda(kanan);
         }
     }
 }

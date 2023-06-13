@@ -32,32 +32,32 @@ public class Minigame : MonoBehaviour
 
     public void SaveMinigame(string namaMinigame, int score)
     {
-        if (namaMinigame == _KartuMemori)
+        if (namaMinigame == _KartuMemori && score > score_KartuMemori)
         {
             PlayerPrefs.SetFloat(_KartuMemori, score);
             score_KartuMemori = score;
         }
-        else if (namaMinigame == _PolaSuara)
+        else if (namaMinigame == _PolaSuara && score > score_PolaSuara)
         {
             PlayerPrefs.SetFloat(_PolaSuara, score);
             score_PolaSuara = score;
         }
-        else if (namaMinigame == _DengarkanKata)
+        else if (namaMinigame == _DengarkanKata && score > score_DengarkanKata)
         {
             PlayerPrefs.SetFloat(_DengarkanKata, score);
             score_DengarkanKata = score;
         }
-        else if (namaMinigame == _Perbandingnan)
+        else if (namaMinigame == _Perbandingnan && score > score_Perbandingnan)
         {
             PlayerPrefs.SetFloat(_Perbandingnan, score);
             score_Perbandingnan = score;
         }
-        else if (namaMinigame == _LengkapiKata)
+        else if (namaMinigame == _LengkapiKata && score > score_LengkapiKata)
         {
             PlayerPrefs.SetFloat(_LengkapiKata, score);
             score_LengkapiKata = score;
         }
-        else if (namaMinigame == _PilihanGanda)
+        else if (namaMinigame == _PilihanGanda && score > score_PilihanGanda)
         {
             PlayerPrefs.SetFloat(_PilihanGanda, score);
             score_PilihanGanda = score;

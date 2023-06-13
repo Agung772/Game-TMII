@@ -31,7 +31,7 @@ public class Perbandingan_Perbandingan : MonoBehaviour
             GetComponent<RectTransform>().position = Input.mousePosition;
         }
 
-        if (Vector3.Distance(GetComponent<RectTransform>().position, tempatPerbandinganRT.position) < 55)
+        if (Vector3.Distance(GetComponent<RectTransform>().position, tempatPerbandinganRT.position) < 100)
         {
             tempatPerbandingan = true;
         }
@@ -91,5 +91,6 @@ public class Perbandingan_Perbandingan : MonoBehaviour
         var tempatPerbandinganSC = Perbandingan_TempatPerbandingan.instance;
         tempatPerbandinganSC.perbandingan = Perbandingan_TempatPerbandingan.JenisPerbandingan.Null;
         GetComponent<RectTransform>().position = posisiAwal;
+        tempatPerbandingan = false;
     }
 }
