@@ -45,19 +45,31 @@ public class PilihanGanda_Gameplay : MonoBehaviour
     public void StartSoal()
     {
         soalIndex++;
-        GameObject tempSoal = Instantiate(canvaSoalTemplate, transform);
 
-        tempSoal.SetActive(true);
+        if (soalIndex == soal.soalList.Length - 1)
+        {
+            Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._PilihanGanda, nyawa);
+        }
+        else
+        {
+            PilihanGanda_UI.instance.jumlahSoalText.text = "0" + soalIndex;
 
-        var canvaSoal = tempSoal.GetComponent<PilihanGanda_CanvaSoal>();
+            GameObject tempSoal = Instantiate(canvaSoalTemplate, transform);
 
-        canvaSoal.soalText.text = soal.soalList[soalIndex].soal;
-        canvaSoal.jawabanBenar = soal.soalList[soalIndex].jawabanBenar;
-        canvaSoal.jawaban1.text = soal.soalList[soalIndex].jawaban1;
-        canvaSoal.jawaban2.text = soal.soalList[soalIndex].jawaban2;
-        canvaSoal.jawaban3.text = soal.soalList[soalIndex].jawaban3;
+            tempSoal.SetActive(true);
 
-        canvaSoal.RandomJawaban();
+            var canvaSoal = tempSoal.GetComponent<PilihanGanda_CanvaSoal>();
+
+            canvaSoal.soalText.text = soal.soalList[soalIndex].soal;
+            canvaSoal.jawabanBenar = soal.soalList[soalIndex].jawabanBenar;
+            canvaSoal.jawaban1.text = soal.soalList[soalIndex].jawaban1;
+            canvaSoal.jawaban2.text = soal.soalList[soalIndex].jawaban2;
+            canvaSoal.jawaban3.text = soal.soalList[soalIndex].jawaban3;
+
+            canvaSoal.RandomJawaban();
+        }
+
+
     }
 
     public void JawabanBenar()
@@ -70,6 +82,14 @@ public class PilihanGanda_Gameplay : MonoBehaviour
         nyawa--;
         PilihanGanda_UI.instance.SetNyawa(nyawa);
 
-        Minigame_UI.instance.MiniscoreUI(false);
+        if (nyawa == 0)
+        {
+            Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._PilihanGanda, nyawa);
+        }
+        else
+        {
+            Minigame_UI.instance.MiniscoreUI(false);
+        }
+
     }
 }

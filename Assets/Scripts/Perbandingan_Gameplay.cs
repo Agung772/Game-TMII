@@ -91,11 +91,14 @@ public class Perbandingan_Gameplay : MonoBehaviour
                 {
                     Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._Perbandingnan, nyawa);
                 }
+                else
+                {
+                    Minigame_UI.instance.MiniscoreUI(false);
+                    yield return new WaitForSeconds(1);
+                    Reset();
+                }
 
 
-                Minigame_UI.instance.MiniscoreUI(false);
-                yield return new WaitForSeconds(1);
-                Reset();
             }
         }
 

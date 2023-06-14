@@ -97,6 +97,7 @@ public class DengarkanKata_Gameplay : MonoBehaviour
         else
         {
             nyawa--;
+            DengarkanKata_UI.instance.SetNyawa(nyawa);
             if (nyawa == 0)
             {
                 Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._DengarkanKata, 0);
@@ -105,7 +106,7 @@ public class DengarkanKata_Gameplay : MonoBehaviour
             {
                 Minigame_UI.instance.MiniscoreUI(false);
             }
-            DengarkanKata_UI.instance.SetNyawa(nyawa);
+
         }
     }
 }

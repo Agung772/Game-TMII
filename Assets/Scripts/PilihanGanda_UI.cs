@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class PilihanGanda_UI : MonoBehaviour
 {
     public static PilihanGanda_UI instance;
+
+    public TextMeshProUGUI jumlahSoalText;
 
     private void Awake()
     {

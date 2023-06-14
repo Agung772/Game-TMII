@@ -26,8 +26,15 @@ public class PilihanGanda_CanvaSoal : MonoBehaviour
         }
 
         //Set
-        RandomIndex();
-        transform.GetChild(1).GetComponent<RectTransform>().position = pos[randomIndex];
+        for (int i = 0; i < 4; i++)
+        {
+            if (i != 0)
+            {
+                RandomIndex();
+                transform.GetChild(i).GetComponent<RectTransform>().position = pos[randomIndex];
+            }
+        }
+
 
 
         void RandomIndex()

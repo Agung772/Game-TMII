@@ -62,10 +62,18 @@ public class LengkapiKata_Gameplay : MonoBehaviour
         else
         {
             //Jawaban salah
-            Minigame_UI.instance.MiniscoreUI(false);
-
             nyawa--;
             LengkapiKata_UI.instance.SetNyawa(nyawa);
+
+            if (nyawa == 0)
+            {
+                Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._PilihanGanda, nyawa);
+            }
+            else
+            {
+                Minigame_UI.instance.MiniscoreUI(false);
+
+            }
         }
     }
 }
