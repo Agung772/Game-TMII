@@ -1109,6 +1109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75804185b3522f844a2f101dff6c423b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumlahSoalText: {fileID: 1318284034}
   nyawa:
   - {fileID: 514003959}
   - {fileID: 139730560}
@@ -2775,6 +2776,12 @@ MonoBehaviour:
   jawaban1: {fileID: 1791987326}
   jawaban2: {fileID: 1547674776}
   jawaban3: {fileID: 1896113976}
+  pos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  randomBool: 00000000
 --- !u!224 &2111600607
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2846,7 +2853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4fb6ca216b4fb43ba82bbf80d50282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nyawa: 0
+  nyawa: 3
   soalIndex: 0
   canvaSoalTemplate: {fileID: 2111600605}
   tugu:
