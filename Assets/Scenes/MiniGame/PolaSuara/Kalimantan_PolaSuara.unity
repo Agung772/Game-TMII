@@ -3443,5 +3443,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasGameplay
       objectReference: {fileID: 0}
+    - target: {fileID: 9065837834297275994, guid: b1423a05b6fd6e44095b0dc435f03f4c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d1b53b0eed3bde64d9fb9699894a3596, type: 3}
+    - target: {fileID: 9065837834969824178, guid: b1423a05b6fd6e44095b0dc435f03f4c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1c1a92b982570874f848e6c182262fe1, type: 3}
+    - target: {fileID: 9065837835369879804, guid: b1423a05b6fd6e44095b0dc435f03f4c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 798b660e08e2ab04b9b980254485ea1b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1423a05b6fd6e44095b0dc435f03f4c, type: 3}

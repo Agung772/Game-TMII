@@ -560,6 +560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasMinigame
       objectReference: {fileID: 0}
+    - target: {fileID: 2529675508622401224, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
 --- !u!1 &2035085176
