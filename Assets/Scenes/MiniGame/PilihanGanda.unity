@@ -360,11 +360,11 @@ MonoBehaviour:
     jawaban1: 
     jawaban2: 
     jawaban3: 
-  - soal: ddg dfgdfg dfgdfg df
-    jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
+  - soal: Sekolah merupakan tempat untuk ...
+    jawabanBenar: 2
+    jawaban1: 'Menuntut Ilmu '
+    jawaban2: Mencari Uang
+    jawaban3: Bermain
   - soal: ddg dfgdfg dfgdfg df
     jawabanBenar: 1
     jawaban1: 1111
