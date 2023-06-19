@@ -37,6 +37,11 @@ public class KartuMemori_Gameplay : MonoBehaviour
         {
             kartuParent = KartuMemori_UI.instance.kartuTugu[(int)DataGame.instance.codeTugu];
         }
+        else
+        {
+            //null
+            kartuParent = KartuMemori_UI.instance.kartuTugu[(int)DataGame.instance.codeTugu];
+        }
         kartuParent.SetActive(true);
         totalKartu = kartuParent.transform.childCount;
         KartuMemori_UI.instance.totalSelesaiText.text = "0" + totalSelesai.ToString();

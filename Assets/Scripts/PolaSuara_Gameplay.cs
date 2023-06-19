@@ -44,6 +44,12 @@ public class PolaSuara_Gameplay : MonoBehaviour
             soal = PolaSuara_UI.instance.tuguSoal[(int)DataGame.instance.codeTugu];
             bellParent = PolaSuara_UI.instance.tuguBell[(int)DataGame.instance.codeTugu];
         }
+        else
+        {
+            //null
+            soal = PolaSuara_UI.instance.tuguSoal[(int)DataGame.instance.codeTugu];
+            bellParent = PolaSuara_UI.instance.tuguBell[(int)DataGame.instance.codeTugu];
+        }
 
         soal.gameObject.SetActive(true);
         bellParent.SetActive(true);
