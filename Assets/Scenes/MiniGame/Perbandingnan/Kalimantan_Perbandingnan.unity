@@ -218,34 +218,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasMinigame
       objectReference: {fileID: 0}
-    - target: {fileID: 8313091950432814289, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8313091950589979518, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8313091950589979518, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8313091950617854290, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8313091950963042007, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8313091951799506124, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8313091951799506124, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
 --- !u!1 &269584607
