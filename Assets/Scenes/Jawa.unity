@@ -663,6 +663,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5683529411300728594, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683529412548766985, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683529413036542604, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683529413047132320, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5683529413087366927, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8119274366958062506, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
       propertyPath: m_Name
       value: CanvasMetagame
