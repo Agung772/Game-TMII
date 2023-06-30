@@ -15,24 +15,111 @@ EditorBuildSettings:
     path: Assets/Scenes/Newgame.unity
     guid: 9a6c92e5ad986b84f8e0e423abaa7679
   - enabled: 1
-    path: Assets/Scenes/Jawa.unity
-    guid: 40ca9a6a97856a84baff5c6b3d4aca44
-  - enabled: 1
-    path: Assets/Scenes/Kalimantan.unity
-    guid: 2c0f8d830689ea046a839937b14010f9
-  - enabled: 1
     path: Assets/Scenes/PilihPulau.unity
     guid: 305e563fe6d610f4abab1a1e9459b007
   - enabled: 1
-    path: Assets/Scenes/Sulawesi.unity
+    path: Assets/Scenes/Metagame/Jawa.unity
+    guid: 40ca9a6a97856a84baff5c6b3d4aca44
+  - enabled: 1
+    path: Assets/Scenes/Metagame/Kalimantan.unity
+    guid: 2c0f8d830689ea046a839937b14010f9
+  - enabled: 1
+    path: Assets/Scenes/Metagame/Sulawesi.unity
     guid: 4ea51fc444766514f815eb973cec06c4
   - enabled: 1
-    path: Assets/Scenes/Sumatera.unity
+    path: Assets/Scenes/Metagame/Sumatera.unity
     guid: 84cb9e2faec7acd4ca1538011dcae0df
   - enabled: 1
-    path: Assets/Scenes/Papua.unity
+    path: Assets/Scenes/Metagame/Papua.unity
     guid: f9f92e9667b5f4b46980a857961c48a0
   - enabled: 1
-    path: Assets/Scenes/MiniGame/TemplateMiniGame.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/MiniGame/PolaSuara/Jawa_PolaSuara.unity
+    guid: 26733ba6c61fcd045b2fc79a3a399572
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PolaSuara/Kalimantan_PolaSuara.unity
+    guid: 72672c5007a86444bae538768e8febdc
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PolaSuara/Papua_PolaSuara.unity
+    guid: 132288aa98db9a1428d964f7e4529f69
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PolaSuara/Sulawesi_PolaSuara.unity
+    guid: b283ca39241c9fa40924bd6f3544fc96
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PolaSuara/Sumatera_PolaSuara.unity
+    guid: 8ca757f6d70507642834c0a661418c53
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/DengarkanKata/Jawa_DengarkanKata.unity
+    guid: 768243e5f3f23a044bfda0c72e4f4e11
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/DengarkanKata/Kalimantan_DengarkanKata.unity
+    guid: f6348b4b8796bb447ad01d7a89300cf3
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/DengarkanKata/Papua_DengarkanKata.unity
+    guid: 0382d44f26cb25b4783003faa218da38
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/DengarkanKata/Sulawesi_DengarkanKata.unity
+    guid: f717d067ffa1a9c469355eed401b5e48
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/DengarkanKata/Sumatera_DengarkanKata.unity
+    guid: 04a98c91bf4ca6746822160a96837991
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/KartuMemori/Jawa_KartuMemori.unity
+    guid: 47d94d6d54a29f14bbb86322bcfc99e9
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/KartuMemori/Kalimantan_KartuMemori.unity
+    guid: 837e8b99c0cac2f49be975ec5b0c2e33
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/KartuMemori/Papua_KartuMemori.unity
+    guid: f1bae4fd835f48540ab6d701d9959bf2
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/KartuMemori/Sulawesi_KartuMemori.unity
+    guid: e82f0cfd9128e3c43af97be414c4ef2d
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/KartuMemori/Sumatera_KartuMemori.unity
+    guid: 8393b817780a5034d94e14bb6de3f5c0
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/LengkapiKata/Jawa_LengkapiKata.unity
+    guid: 5eafe079185e74b4a9c93ded478e4696
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/LengkapiKata/Kalimantan_LengkapiKata.unity
+    guid: 66a5a68ba9038bc489066d893c8cadd0
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/LengkapiKata/Papua_LengkapiKata.unity
+    guid: a3c47a7673f12b546a6dd561dc2a1bbd
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/LengkapiKata/Sulawesi_LengkapiKata.unity
+    guid: 7b3580cf7923c094aab3a93f9e6c90c6
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/LengkapiKata/Sumatera_LengkapiKata.unity
+    guid: dd0353b5c76d87640bf1140063f95d47
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Perbandingnan/Jawa_Perbandingnan.unity
+    guid: dc15b9fd854a87f468982cb028f84378
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Perbandingnan/Kalimantan_Perbandingnan.unity
+    guid: 4ff276d3728ed2049a537179ca79221f
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Perbandingnan/Papua_Perbandingnan.unity
+    guid: b931f26b2be472d4c9b4202bd0855e38
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Perbandingnan/Sulawesi_Perbandingnan.unity
+    guid: 8fef63bf9d1b1904aa602f5db7fd0788
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Perbandingnan/Sumatera_Perbandingnan.unity
+    guid: 988d9c04b51e07342a90484c9c4c7407
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PilihanGanda/Jawa_PilihanGanda.unity
+    guid: cf2b738b05ee9014fa7c181596446530
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PilihanGanda/Kalimantan_PilihanGanda.unity
+    guid: d2516ea103f18fe42979263859315b45
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PilihanGanda/Sulawesi_PilihanGanda.unity
+    guid: 0f16ee76a06027242accdaf1f6b8995e
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PilihanGanda/Sumatera_PilihanGanda.unity
+    guid: 95df55a078c4fd340a91cb6cd42d968a
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PilihanGanda/Papua_PilihanGanda.unity
+    guid: 3413735c5aa3f4f44944f431efd40a71
   m_configObjects: {}

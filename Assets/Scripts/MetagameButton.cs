@@ -18,7 +18,6 @@ public class MetagameButton : MonoBehaviour
     {
         pauseUI.SetActive(false);
         petaUI.SetActive(false);
-        RenderMap.instance.gameObject.SetActive(false);
         tasUI.SetActive(false);
         tokoUI.SetActive(false);
         pindahPulauUI.SetActive(false);
@@ -34,7 +33,6 @@ public class MetagameButton : MonoBehaviour
         else if (namaUI == petaUI.name)
         {
             petaUI.SetActive(true);
-            RenderMap.instance.gameObject.SetActive(true);
         }
         else if(namaUI == tasUI.name)
         {

@@ -8,6 +8,8 @@ public class RenderMap : MonoBehaviour
 
     [SerializeField] Vector3 posisiAwal;
 
+    [SerializeField] float speed;
+
     [SerializeField] float positionX;
     [SerializeField] float positionY;
     [SerializeField] float positionZ;
@@ -18,34 +20,28 @@ public class RenderMap : MonoBehaviour
     }
     private void Start()
     {
-        transform.parent = null;
-
         posisiAwal = transform.position;
 
         positionX = posisiAwal.x;
         positionY = posisiAwal.y;
         positionZ = posisiAwal.z;
-
-        gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        float rangeX = posisiAwal.x - transform.position.x;
         float rangeY = posisiAwal.y - transform.position.y;
-        float rangeZ = posisiAwal.z - transform.position.z;
 
         //Input Scroll
         if (transform.position.y <= posisiAwal.y)
         {
-            positionY -= Input.mouseScrollDelta.y * 1;
+            positionY -= Input.mouseScrollDelta.y * speed;
         }
 
         //Input Axis Mouse
         if (Input.GetMouseButton(0))
         {
-            positionX -= Input.GetAxis("Mouse X") * 3;
-            positionZ -= Input.GetAxis("Mouse Y") * 3;
+            positionX -= Input.GetAxis("Mouse X") * speed;
+            positionZ -= Input.GetAxis("Mouse Y") * speed;
         }
         positionY = Mathf.Clamp(positionY, posisiAwal.y - 100, posisiAwal.y);
 

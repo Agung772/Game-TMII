@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Tugu : MonoBehaviour
 {
+    public string namaTugu;
+    public int codeTugu;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerMetagame>())
