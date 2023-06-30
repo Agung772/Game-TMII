@@ -36,4 +36,9 @@ public class Bilangan_Gameplay : MonoBehaviour
 
         o_waktu = waktu;
     }
+
+    private void Update()
+    {
+        
+    }
 }
