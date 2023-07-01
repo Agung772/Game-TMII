@@ -52,10 +52,14 @@ public class HubungkanTitik_StartDot : MonoBehaviour
             dotImage.color = color;
             lineRenderer.startColor = color;
             lineRenderer.endColor = color;
+
+            HubungkanTitik_Gameplay.instance.DotBenar();
         }
         else if (dotPos.salah)
         {
             lineRenderer.SetPosition(1, new Vector3(transform.position.x, transform.position.y, 0));
+
+            HubungkanTitik_Gameplay.instance.DotSalah();
         }
         else
         {

@@ -36,7 +36,6 @@ public class HubungkanTitik_RandomChild : MonoBehaviour
                 {
                     randomBool[i] = true;
                     random = tempRandom;
-                    print(random);
                     break;
                 }
                 else if (randomBool[i] && tempRandom == i)
