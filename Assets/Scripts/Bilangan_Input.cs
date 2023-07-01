@@ -6,7 +6,7 @@ public class Bilangan_Input : MonoBehaviour
 {
     public int output;
 
-    [SerializeField] TextMeshProUGUI outputText;
+    public TextMeshProUGUI outputText;
 
     public void InputButton(bool right)
     {
@@ -19,6 +19,8 @@ public class Bilangan_Input : MonoBehaviour
             output--;
         }
 
-        outputText.text = output.ToString();
+        Bilangan_InputManager.instance.OutputUpdate();
     }
+
+
 }

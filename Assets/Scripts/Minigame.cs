@@ -10,6 +10,9 @@ public class Minigame : MonoBehaviour
     public float score_Perbandingnan;
     public float score_LengkapiKata;
     public float score_PilihanGanda;
+    public float score_Bilangan;
+    public float score_HubungkanTitik;
+    public float score_PlusMinus;
 
     [HideInInspector]
     public string
@@ -18,7 +21,10 @@ public class Minigame : MonoBehaviour
     _DengarkanKata = "_DengarkanKata",
     _Perbandingnan = "_Perbandingnan",
     _LengkapiKata = "_LengkapiKata",
-    _PilihanGanda = "_PilihanGanda";
+    _PilihanGanda = "_PilihanGanda",
+    _Bilangan = "_Bilangan",
+    _HubungkanTitik = "_HubungkanTitik",
+    _PlusMinus = "_PlusMinus";
 
     public void LoadData()
     {
@@ -28,6 +34,9 @@ public class Minigame : MonoBehaviour
         score_Perbandingnan = PlayerPrefs.GetFloat(_Perbandingnan);
         score_LengkapiKata = PlayerPrefs.GetFloat(_LengkapiKata);
         score_PilihanGanda = PlayerPrefs.GetFloat(_PilihanGanda);
+        score_Bilangan = PlayerPrefs.GetFloat(_Bilangan);
+        score_HubungkanTitik = PlayerPrefs.GetFloat(_HubungkanTitik);
+        score_PlusMinus = PlayerPrefs.GetFloat(_PlusMinus);
     }
 
     public void SaveMinigame(string namaMinigame, int score)
@@ -61,6 +70,21 @@ public class Minigame : MonoBehaviour
         {
             PlayerPrefs.SetFloat(_PilihanGanda, score);
             score_PilihanGanda = score;
+        }
+        else if (namaMinigame == _Bilangan && score > score_Bilangan)
+        {
+            PlayerPrefs.SetFloat(_Bilangan, score);
+            score_Bilangan = score;
+        }        
+        else if (namaMinigame == _HubungkanTitik && score > score_HubungkanTitik)
+        {
+            PlayerPrefs.SetFloat(_HubungkanTitik, score);
+            score_HubungkanTitik = score;
+        }
+        else if (namaMinigame == _PlusMinus && score > score_PlusMinus)
+        {
+            PlayerPrefs.SetFloat(_PlusMinus, score);
+            score_PlusMinus = score;
         }
     }
 }

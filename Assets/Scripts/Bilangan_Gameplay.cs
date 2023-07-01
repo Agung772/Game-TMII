@@ -35,10 +35,59 @@ public class Bilangan_Gameplay : MonoBehaviour
         soalIndex++;
 
         o_waktu = waktu;
+
+        StartSoal();
     }
 
+    bool oTime;
     private void Update()
     {
-        
+        if (!oTime) o_waktu -= Time.deltaTime;
+        Bilangan_UI.instance.timeImage.fillAmount = o_waktu / waktu;
+
+        if (o_waktu <= 0)
+        {
+            Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._Bilangan, 0);
+        }
     }
+
+    public void StartSoal()
+    {
+        Bilangan_UI.instance.soalText.text = soalIndex + "/5";
+        Bilangan_UI.instance.codeText.text = soal.soalList[soalIndex].angka.ToString();
+        Bilangan_UI.instance.petunjukText.text = soal.soalList[soalIndex].dibaca.ToString();
+    }
+
+    public void InputJawaban()
+    {
+        if (Bilangan_InputManager.instance.output == soal.soalList[soalIndex].angka)
+        {
+            if (soalIndex == soal.soalList.Length - 1)
+            {
+                StartCoroutine(Coroutine());
+                IEnumerator Coroutine()
+                {
+                    oTime = true;
+                    yield return new WaitForSeconds(2);
+                    Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._Bilangan, 3);
+                }
+            }
+            else
+            {
+                soalIndex++;
+                StartSoal();
+
+                o_waktu = waktu;
+                
+                Bilangan_InputManager.instance.OutputReset();
+            }
+
+        }
+        else
+        {
+            UIManager.instance.SpawnNotif("Jawaban yang kamu bikin salah");
+        }
+    }
+
+
 }

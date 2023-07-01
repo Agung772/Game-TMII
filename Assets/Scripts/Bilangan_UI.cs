@@ -13,7 +13,7 @@ public class Bilangan_UI : MonoBehaviour
     public TextMeshProUGUI codeText;
     public TextMeshProUGUI petunjukText;
 
-    [SerializeField] Image timeImage;
+    public Image timeImage;
 
     private void Awake()
     {
