@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a22fb35095e99c4d9525b7048f482b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soalText: {fileID: 0}
+  soalText: {fileID: 2140660315}
   nyawa:
   - {fileID: 1013436145}
   - {fileID: 64130761}
@@ -2134,13 +2134,14 @@ MonoBehaviour:
   nyawa: 3
   benar: 0
   soalIndex: 0
-  tugu:
+  tugus:
   - {fileID: 578863483}
   - {fileID: 578863483}
   - {fileID: 1311390728}
   - {fileID: 21013537}
   - {fileID: 428812919}
   - {fileID: 779974836}
+  tugu: {fileID: 0}
   soals: []
 --- !u!4 &610668601 stripped
 Transform:
@@ -3070,7 +3071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &851836075
 Transform:
   m_ObjectHideFlags: 0
@@ -3938,7 +3939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1153491053
 Transform:
   m_ObjectHideFlags: 0
@@ -5527,7 +5528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1873643486
 Transform:
   m_ObjectHideFlags: 0
@@ -6185,7 +6186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2110975399
 Transform:
   m_ObjectHideFlags: 0

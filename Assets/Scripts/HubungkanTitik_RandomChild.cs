@@ -8,7 +8,8 @@ public class HubungkanTitik_RandomChild : MonoBehaviour
     [SerializeField] bool[] randomBool;
 
     [SerializeField] Vector3[] v3Awal;
-    private void Start()
+
+    private void Awake()
     {
         randomBool = new bool[transform.childCount];
         v3Awal = new Vector3[transform.childCount];
@@ -32,7 +33,7 @@ public class HubungkanTitik_RandomChild : MonoBehaviour
 
             for (int i = 0; i < tempChild.Length; i++)
             {
-                if(!randomBool[i] && tempRandom == i)
+                if (!randomBool[i] && tempRandom == i)
                 {
                     randomBool[i] = true;
                     random = tempRandom;

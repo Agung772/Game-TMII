@@ -11,8 +11,8 @@ public class HubungkanTitik_Gameplay : MonoBehaviour
 
     public int soalIndex;
 
-    [SerializeField] GameObject[] tugu;
-    GameObject soal;
+    [SerializeField] GameObject[] tugus;
+    public GameObject tugu;
 
     public GameObject[] soals;
     private void Awake()
@@ -22,9 +22,9 @@ public class HubungkanTitik_Gameplay : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < tugu[1].transform.parent.childCount; i++)
+        for (int i = 0; i < tugus[1].transform.parent.childCount; i++)
         {
-            tugu[1].transform.parent.GetChild(i).gameObject.SetActive(false);
+            tugus[1].transform.parent.GetChild(i).gameObject.SetActive(false);
         }
 
 
@@ -32,34 +32,22 @@ public class HubungkanTitik_Gameplay : MonoBehaviour
         //Start
         if (DataGame.instance.pulau == DataGame.instance._Sumatera)
         {
-            soal = tugu[(int)DataGame.instance.codeTugu];
+            tugu = tugus[(int)DataGame.instance.codeTugu];
         }
 
-        soal.gameObject.SetActive(true);
+        tugu.gameObject.SetActive(true);
 
         HubungkanTitik_UI.instance.SetNyawa(nyawa);
+        HubungkanTitik_UI.instance.soalText.text = soalIndex + "/5";
 
         //Set soall
         NextSoal();
     }
 
-    void NextSoal()
-    {
-        soalIndex++;
-
-        soals = new GameObject[soal.transform.GetChild(0).childCount];
-        for (int i = 0; i < soals.Length; i++)
-        {
-            soals[i].gameObject.SetActive(false);
-        }
-
-        soals[soalIndex].SetActive(true);
-    }
-
     public void DotBenar()
     {
         benar++;
-        if (soal.transform.GetChild(0).GetChild(0).childCount == benar)
+        if (tugu.transform.GetChild(0).GetChild(0).childCount == benar)
         {
             if (soalIndex == 5)
             {
@@ -82,5 +70,22 @@ public class HubungkanTitik_Gameplay : MonoBehaviour
         {
             Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._HubungkanTitik, 0);
         }
+    }
+
+    void NextSoal()
+    {
+        soalIndex++;
+        HubungkanTitik_UI.instance.soalText.text = soalIndex + "/5";
+
+        benar = 0;
+
+        soals = new GameObject[tugu.transform.childCount];
+        for (int i = 0; i < soals.Length; i++)
+        {
+            soals[i] = tugu.transform.GetChild(i).gameObject;
+            soals[i].gameObject.SetActive(false);
+        }
+
+        soals[soalIndex - 1].SetActive(true);
     }
 }
