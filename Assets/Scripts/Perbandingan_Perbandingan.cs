@@ -19,11 +19,12 @@ public class Perbandingan_Perbandingan : MonoBehaviour
     RectTransform tempatPerbandinganRT;
     Vector3 posisiAwal;
 
-    private void Start()
+    private void Awake()
     {
         posisiAwal = GetComponent<RectTransform>().position;
         tempatPerbandinganRT = Perbandingan_TempatPerbandingan.instance.GetComponent<RectTransform>();
     }
+
     private void Update()
     {
         if (click)
