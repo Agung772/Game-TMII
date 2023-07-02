@@ -2127,7 +2127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.size
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.data[3].judulSubtema
