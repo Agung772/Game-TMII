@@ -3810,8 +3810,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2391706276752270650}
+  - component: {fileID: 2430738543402676075}
   m_Layer: 5
-  m_Name: PilihTemaUI
+  m_Name: PilihSubTemaUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3839,6 +3840,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2430738543402676075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6089938356634056749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db09742b57d22b042879e5dcea560cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  templateUI: {fileID: 8519512227518160679}
+  parentSpawn: {fileID: 4138550887296926904}
 --- !u!1 &6183274137985247371
 GameObject:
   m_ObjectHideFlags: 0
@@ -8206,7 +8221,8 @@ MonoBehaviour:
   popupPindahPulau: {fileID: 97702494693108984}
   tokoAwalUI: {fileID: 1267812027169012436}
   cinderaMataUI: {fileID: 8119274367130841748}
-  pilihTemaUI: {fileID: 6089938356634056749}
+  pilihSubTemaUI: {fileID: 6089938356634056749}
+  pilihSubTema: {fileID: 0}
 --- !u!223 &8119274366958062505
 Canvas:
   m_ObjectHideFlags: 0
@@ -10318,6 +10334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8904365781266163026}
+  - component: {fileID: 5419878466599228492}
   - component: {fileID: 255853065966515827}
   - component: {fileID: 7606722358644883515}
   - component: {fileID: 4047740258454805577}
@@ -10348,6 +10365,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 500, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5419878466599228492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8519512227518160679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3b45072bde3734cb85163bf5d12b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namaScene: 
+  button: {fileID: 4047740258454805577}
+  titleText: {fileID: 3037338768024845955}
 --- !u!222 &255853065966515827
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10429,7 +10461,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7606722358644883515}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5419878466599228492}
+        m_TargetAssemblyTypeName: Metagame_Subtema, Assembly-CSharp
+        m_MethodName: PindahScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8813623484124138224
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,14 @@ public class MetagameButton : MonoBehaviour
     [SerializeField] GameObject popupPindahPulau;
     [SerializeField] GameObject tokoAwalUI;
     [SerializeField] GameObject cinderaMataUI;
-    [SerializeField] GameObject pilihTemaUI;
+
+    [SerializeField] GameObject pilihSubTemaUI;
+    [HideInInspector] public Metagame_PilihSubTema pilihSubTema;
+
+    private void Awake()
+    {
+        pilihSubTema = pilihSubTemaUI.GetComponent<Metagame_PilihSubTema>();
+    }
 
     public void SetUI(string namaUI)
     {
@@ -24,7 +31,7 @@ public class MetagameButton : MonoBehaviour
         popupPindahPulau.SetActive(false);
         tokoAwalUI.SetActive(false);
         cinderaMataUI.SetActive(false);
-        pilihTemaUI.SetActive(false);
+        pilihSubTemaUI.SetActive(false);
 
         if (namaUI == pauseUI.name)
         {
@@ -61,9 +68,9 @@ public class MetagameButton : MonoBehaviour
             tokoUI.SetActive(true);
             cinderaMataUI.SetActive(true);
         }
-        else if (namaUI == pilihTemaUI.name)
+        else if (namaUI == pilihSubTemaUI.name)
         {
-            pilihTemaUI.SetActive(true);
+            pilihSubTemaUI.SetActive(true);
         }
     }
 }
