@@ -691,6 +691,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 354703868622344522, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -113
+      objectReference: {fileID: 0}
+    - target: {fileID: 354703868805324745, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c18c27cc99b7a54787c7158aa887e2d, type: 3}
+    - target: {fileID: 354703868930917784, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 354703868930917784, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 354703868930917787, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4fe950805810b3d4ebf43e7f7bc454e3, type: 3}
+    - target: {fileID: 354703869128297618, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ada626e66ddf1e44687fe447345273a7, type: 3}
+    - target: {fileID: 354703870020220591, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b1b8b6e2c44e9f643a0cedcce0f82b89, type: 3}
+    - target: {fileID: 354703870118412449, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 92847c7d51181744d8bf39448ec213db, type: 3}
+    - target: {fileID: 354703870118412455, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 170.4762
+      objectReference: {fileID: 0}
+    - target: {fileID: 354703870118412455, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 132.38095
+      objectReference: {fileID: 0}
+    - target: {fileID: 354703870118412455, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 859
+      objectReference: {fileID: 0}
+    - target: {fileID: 354703870138679652, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 383e2a6ebf1590a4eadd2f26fefa88fe, type: 3}
     - target: {fileID: 354703870457770467, guid: 4ed3f10a810cba64eb68c59fa3743aec, type: 3}
       propertyPath: tugu.Array.data[0]
       value: 

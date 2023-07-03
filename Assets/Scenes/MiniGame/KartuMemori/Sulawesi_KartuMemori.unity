@@ -2932,7 +2932,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -3652,6 +3652,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2529675507450787189, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2529675507747392587, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3739,6 +3743,14 @@ PrefabInstance:
     - target: {fileID: 2529675507747392624, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
       propertyPath: m_Name
       value: CanvasMinigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529675507987292810, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c8d516d0fd6995a48a50031d8c23c134, type: 3}
+    - target: {fileID: 2529675508622401224, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
@@ -5553,6 +5565,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6543699790165286419, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 11abfa2448edcaa4dabee6a40bc91bc7, type: 3}
+    - target: {fileID: 6543699790165286420, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543699790165286420, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543699790165286420, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543699790165286420, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543699790165286420, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1613.2996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543699790165286420, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -884.0476
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543699790165286420, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 439.59998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543699790347715028, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 92847c7d51181744d8bf39448ec213db, type: 3}
+    - target: {fileID: 6543699790589868416, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543699790589868416, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
     - target: {fileID: 6543699790866305385, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
       propertyPath: kartuTugu.Array.data[0]
       value: 
@@ -5665,6 +5721,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasKartuMemori
       objectReference: {fileID: 0}
+    - target: {fileID: 6543699791717054588, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ec60af2f073433e479e48d5f204e1020, type: 3}
+    - target: {fileID: 6543699792187171566, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b1b8b6e2c44e9f643a0cedcce0f82b89, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38912b3efc4ca67489b7a0160e8a610d, type: 3}
 --- !u!1001 &6858940034671433358
