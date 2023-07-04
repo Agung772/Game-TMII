@@ -42,6 +42,17 @@ public class PlusMinus_Gameplay : MonoBehaviour
 
 
     }
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            RightButton();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            LeftButton();
+        }
+    }
 
     void StartSoal()
     {
@@ -53,6 +64,7 @@ public class PlusMinus_Gameplay : MonoBehaviour
 
         //Get index soal
         string tempSoal = soal.soalList[soalIndex].soal1.ToString();
+        //Spawn bilangan sususan
         for (int i = 0; i < tempSoal.Length; i++)
         {
             GameObject temp = Instantiate(PlusMinus_UI.instance.bilanganBersusunPrefab, PlusMinus_UI.instance.bilanganBersusunParent);
@@ -73,7 +85,16 @@ public class PlusMinus_Gameplay : MonoBehaviour
 
             temp.transform.SetAsFirstSibling();
 
-           
+            //Set OperatorAritmatik
+            if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Tambah)
+            {
+                temp.GetComponent<PlusMinus_BilanganBersusun>().operatorAritmatikText.text = "+";
+            }
+            else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kurang)
+            {
+                temp.GetComponent<PlusMinus_BilanganBersusun>().operatorAritmatikText.text = "-";
+            }
+
 
         }
 
@@ -100,23 +121,107 @@ public class PlusMinus_Gameplay : MonoBehaviour
 
 
     }
-
     public void CheckJawaban(string inputJawaban)
     {
-        int tempInput = int.Parse(outputJawaban);
-        int jawabanBenar = soal.soalList[soalIndex].soal1 + soal.soalList[soalIndex].soal2;
-
-        print(tempInput);
-        print(jawabanBenar);
-        if (tempInput == jawabanBenar)
+        if (inputJawaban != "")
         {
-            print("Jawaban benar");
+            int tempInput = int.Parse(outputJawaban);
+
+            int jawabanBenar = 0;
+            if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Tambah)
+            {
+                jawabanBenar = soal.soalList[soalIndex].soal1 + soal.soalList[soalIndex].soal2;
+            }
+            else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kurang)
+            {
+                jawabanBenar = soal.soalList[soalIndex].soal1 - soal.soalList[soalIndex].soal2;
+            }
+            else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kali)
+            {
+                jawabanBenar = soal.soalList[soalIndex].soal1 * soal.soalList[soalIndex].soal2;
+            }
+
+            print(tempInput);
+            print(jawabanBenar);
+            if (tempInput == jawabanBenar)
+            {
+                print("Jawaban benar");
+            }
+            else
+            {
+                print("Jawaban salah");
+            }
+        }
+
+
+    }
+    public void JawabanInput(string input)
+    {
+        if (input != "")
+        {
+            int tempInput = int.Parse(input);
+            //Input jawaban untuk penjumlahan ------------------------------------------------------
+            if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Tambah)
+            {
+                if (tempInput >= 10 && urutBilangan < bilanganBersusuns.Length - 1)
+                {
+                    string temp0 = "";
+                    temp0 += input[0];
+
+                    string temp1 = "";
+                    temp1 += input[1];
+
+                    bilanganBersusuns[urutBilangan + 1].naikText.text = temp0.ToString();
+                    bilanganBersusuns[urutBilangan].jawabanInput.text = temp1.ToString();
+                }
+            }
+            //Input jawaban untuk pengurangan ------------------------------------------------------
+            else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kurang)
+            {
+                int soalAtas = int.Parse(bilanganBersusuns[urutBilangan].soalAtasText.text);
+                int soalBawah = int.Parse(bilanganBersusuns[urutBilangan].soalBawahText.text);
+                if ((soalAtas - soalBawah) < 0 && urutBilangan < bilanganBersusuns.Length - 1)
+                {
+                    bilanganBersusuns[urutBilangan + 1].naikText.text = "-1";
+                }
+            }
+            //Input jawaban untuk perkalian ------------------------------------------------------
+            else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kali)
+            {
+                int soalAtas = int.Parse(bilanganBersusuns[urutBilangan].soalAtasText.text);
+                int soalBawah = int.Parse(bilanganBersusuns[urutBilangan].soalBawahText.text);
+                if ((soalAtas - soalBawah) < 0 && urutBilangan < bilanganBersusuns.Length - 1)
+                {
+                    //string temp0 = "";
+                    //temp0 += input[0];
+
+                    //string temp1 = "";
+                    //temp1 += input[1];
+
+                    bilanganBersusuns[urutBilangan + 1].naikText.text = "-1";
+                }
+            }
+
+            //Get jawaban dari semua bilangan sususan ------------------------------------------------------
+            outputJawaban = null;
+            for (int i = bilanganBersusuns.Length - 1; i > -1; i--)
+            {
+                outputJawaban += bilanganBersusuns[i].jawabanInput.text;
+            }
         }
         else
         {
-            print("Jawaban salah");
+            //Hapus penaikan bilangan ------------------------------------------------------
+            if (urutBilangan < bilanganBersusuns.Length - 1)
+            {
+                bilanganBersusuns[urutBilangan + 1].naikText.text = "";
+            }
+
         }
+
+
     }
+
     public void RightButton()
     {
         if (urutBilangan > 0)
@@ -145,36 +250,4 @@ public class PlusMinus_Gameplay : MonoBehaviour
         bilanganBersusuns[urutBilangan].jawabanInput.ActivateInputField();
     }
 
-    public void JawabanInput(string input)
-    {
-
-
-        if (input != "")
-        {
-            int tempInput = int.Parse(input);
-            if (tempInput >= 10 && urutBilangan < bilanganBersusuns.Length - 1)
-            {
-                string temp0 = "";
-                temp0 += input[0];
-
-                string temp1 = "";
-                temp1 += input[1];
-
-                bilanganBersusuns[urutBilangan + 1].naikText.text = temp0.ToString();
-                bilanganBersusuns[urutBilangan].jawabanInput.text = temp1.ToString();
-            }
-
-            outputJawaban = null;
-            for (int i = bilanganBersusuns.Length - 1; i > -1; i--)
-            {
-                outputJawaban += bilanganBersusuns[i].jawabanInput.text;
-            }
-        }
-        else
-        {
-            bilanganBersusuns[urutBilangan + 1].naikText.text = "";
-        }
-
-
-    }
 }
