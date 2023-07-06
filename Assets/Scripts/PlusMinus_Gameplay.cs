@@ -39,7 +39,17 @@ public class PlusMinus_Gameplay : MonoBehaviour
 
 
         StartSoal();
-        int soal2 = int.Parse(soal.soalList[soalIndex].soal2);
+
+        string tempSoal2 = "";
+        int soal2 = 0;
+
+        for (int i = 0; i < soal.soalList[soalIndex].soal2.Length; i++)
+        {
+            if (Char.IsDigit(soal.soalList[soalIndex].soal2[i]))
+                tempSoal2 += soal.soalList[soalIndex].soal2[i];
+        }
+
+        int.TryParse(tempSoal2, out soal2);
         print(soal2);
 
     }
@@ -96,7 +106,10 @@ public class PlusMinus_Gameplay : MonoBehaviour
             {
                 temp.GetComponent<PlusMinus_BilanganBersusun>().operatorAritmatikText.text = "-";
             }
-
+            else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kali)
+            {
+                temp.GetComponent<PlusMinus_BilanganBersusun>().operatorAritmatikText.text = "x";
+            }
 
         }
 
@@ -129,8 +142,20 @@ public class PlusMinus_Gameplay : MonoBehaviour
         {
             int tempInput = int.Parse(outputJawaban);
 
+            //Convert to int
+            string tempSoal2 = "";
+            int soal2 = 0;
+
+            for (int i = 0; i < soal.soalList[soalIndex].soal2.Length; i++)
+            {
+                if (Char.IsDigit(soal.soalList[soalIndex].soal2[i]))
+                    tempSoal2 += soal.soalList[soalIndex].soal2[i];
+            }
+
+
+            //Get int
             int soal1 = int.Parse(soal.soalList[soalIndex].soal1);
-            int soal2 = int.Parse(soal.soalList[soalIndex].soal2);
+            int.TryParse(tempSoal2, out soal2);
 
             int jawabanBenar = 0;
             if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Tambah)
@@ -204,16 +229,19 @@ public class PlusMinus_Gameplay : MonoBehaviour
             else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kali)
             {
                 int soalAtas = int.Parse(bilanganBersusuns[urutBilangan].soalAtasText.text);
-                int soalBawah = int.Parse(bilanganBersusuns[urutBilangan].soalBawahText.text);
-                if ((soalAtas - soalBawah) < 0 && urutBilangan < bilanganBersusuns.Length - 1)
+                int soalBawah = 0;
+                if (bilanganBersusuns[urutBilangan].soalBawahText.text != "")
+                    soalBawah = int.Parse(bilanganBersusuns[urutBilangan].soalBawahText.text);
+                if (tempInput >= 10 && urutBilangan < bilanganBersusuns.Length - 1)
                 {
-                    //string temp0 = "";
-                    //temp0 += input[0];
+                    string temp0 = "";
+                    temp0 += input[0];
 
-                    //string temp1 = "";
-                    //temp1 += input[1];
+                    string temp1 = "";
+                    temp1 += input[1];
 
-                    bilanganBersusuns[urutBilangan + 1].naikText.text = "-1";
+                    bilanganBersusuns[urutBilangan + 1].naikText.text = temp0.ToString();
+                    bilanganBersusuns[urutBilangan].jawabanInput.text = temp1.ToString();
                 }
             }
 

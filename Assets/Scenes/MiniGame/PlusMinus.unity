@@ -343,23 +343,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soalList:
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 6232
-    soal2: 5262
-    operatorAritmatik: 1
-  - soal1: 2540
-    soal2: 1507
+  - soal1: 353
+    soal2: --3
+    operatorAritmatik: 2
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2500
-    soal2: 1500
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 4363
-    soal2: 4631
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 1164
-    soal2: 4841
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
 --- !u!1 &332851993
 GameObject:
@@ -750,6 +750,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55834ea836e2e6d4ca458943fcafa5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumlahSoalText: {fileID: 2140660315}
+  soalText: {fileID: 1522118343}
   bilanganBersusunParent: {fileID: 1028128583}
   bilanganBersusunPrefab: {fileID: 3064438680943010765, guid: 5afee443551f532498f6274710b85729, type: 3}
 --- !u!1 &652192501
@@ -1042,23 +1044,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soalList:
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2495
-    soal2: 1340
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2540
-    soal2: 1507
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2500
-    soal2: 1500
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
 --- !u!1 &943455459
 GameObject:
@@ -1320,23 +1322,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soalList:
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2495
-    soal2: 1340
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2540
-    soal2: 1507
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2500
-    soal2: 1500
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
 --- !u!1 &1028128582
 GameObject:
@@ -1692,23 +1694,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soalList:
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2495
-    soal2: 1340
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2540
-    soal2: 1507
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2500
-    soal2: 1500
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
 --- !u!1 &1475747998
 GameObject:
@@ -2028,23 +2030,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soalList:
-  - soal1: 0
-    soal2: 0
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2495
-    soal2: 1340
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2540
-    soal2: 1507
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2500
-    soal2: 1500
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2352
-    soal2: 2356
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
-  - soal1: 2456
-    soal2: 7354
+  - soal1: 
+    soal2: 
     operatorAritmatik: 0
 --- !u!1001 &1611146483
 PrefabInstance:
