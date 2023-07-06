@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: f97964a7c1f0ebd4d8f50a4e733d0e00, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: c2d8ae7411670824c9eb66d446aec06d, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -569,6 +569,104 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3058832182187914075, guid: 46cde98a9c4b8cd4a9e5b87b5b537f79, type: 3}
   m_PrefabInstance: {fileID: 127640056}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &133861439
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1407055520}
+    m_Modifications:
+    - target: {fileID: 5125027794367402315, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_Name
+      value: Tugu (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: codeTugu
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: namaTugu
+      value: Tugu Monpera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[0].judulSubtema
+      value: Perbandingan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[0].minigameList
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[1].judulSubtema
+      value: Macam Dongeng
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[1].minigameList
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[2].judulSubtema
+      value: Sila Pertama dan kedua dalam kehidupan sehari-hari
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[2].minigameList
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -39.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+--- !u!4 &133861440 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+  m_PrefabInstance: {fileID: 133861439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &135087651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -840,7 +938,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274636359}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -850,7 +948,7 @@ Transform:
   - {fileID: 1648795410}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1001 &357126568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2076,21 +2174,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tugu (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: codeTugu
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: namaTugu
+      value: Tugu Jam Gadang
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[0].judulSubtema
+      value: Perkalian
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[0].minigameList
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[1].judulSubtema
+      value: Kelompok Hewan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[1].minigameList
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[2].judulSubtema
+      value: Pengalaman Sila ke tiga
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[2].minigameList
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.78
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.95
+      value: -17.4
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2809,6 +2943,112 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2554795306497959342, guid: 7813b2bc90d95c8408ccebb0894453bf, type: 3}
   m_PrefabInstance: {fileID: 1109468198}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1162480401
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1407055520}
+    m_Modifications:
+    - target: {fileID: 5125027793934921826, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027793934921829, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027793934921829, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402315, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_Name
+      value: Tugu (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: codeTugu
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: namaTugu
+      value: Tugu Bambu Runcing
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[0].judulSubtema
+      value: Pembagian
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[0].minigameList
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[1].judulSubtema
+      value: Kalimat Efektif
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[2].judulSubtema
+      value: Kerja sama
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[2].minigameList
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+--- !u!4 &1162480402 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+  m_PrefabInstance: {fileID: 1162480401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1290232561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3092,6 +3332,8 @@ Transform:
   - {fileID: 878857830}
   - {fileID: 1486332659}
   - {fileID: 1315579564}
+  - {fileID: 1162480402}
+  - {fileID: 133861440}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3523,7 +3765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604634284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.38, y: 0, z: -7.6}
+  m_LocalPosition: {x: 63.58, y: 0, z: -73.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1950733738}
@@ -4629,6 +4871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tembokPulau Sumatera
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0230c8dd9420974f8423e5e3150ffe7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2355982399387309400, guid: a0230c8dd9420974f8423e5e3150ffe7, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -5114,33 +5360,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1407055520}
     m_Modifications:
+    - target: {fileID: 5125027793934921829, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027793934921829, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 08d2503d6d4addc43aed39080aaff731, type: 2}
     - target: {fileID: 5125027794367402315, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_Name
       value: Tugu (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: codeTugu
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: namaTugu
+      value: Tugu Toga
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.data[0].judulSubtema
-      value: 1
+      value: Penjumlahan Ribuan
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.data[0].minigameList
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.data[1].judulSubtema
-      value: 2
+      value: Tumbuh dan Berkembang 2
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.data[1].minigameList
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.data[2].judulSubtema
-      value: 3
+      value: Lambang Pancasila
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.data[2].minigameList
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.data[3].judulSubtema
@@ -5164,7 +5430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.01
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5172,7 +5438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.45
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5569,15 +5835,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 41539521086457993, guid: 822bbbd8770ec2a4291ae87c675530ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.92
+      value: -8.35
       objectReference: {fileID: 0}
     - target: {fileID: 41539521086457993, guid: 822bbbd8770ec2a4291ae87c675530ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.65
+      value: 5.38
       objectReference: {fileID: 0}
     - target: {fileID: 41539521086457993, guid: 822bbbd8770ec2a4291ae87c675530ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 41539521086457993, guid: 822bbbd8770ec2a4291ae87c675530ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9145,17 +9411,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1407055520}
     m_Modifications:
+    - target: {fileID: 5125027793934921827, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.462
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027793934921829, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 08d2503d6d4addc43aed39080aaff731, type: 2}
     - target: {fileID: 5125027794367402315, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_Name
       value: Tugu (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: codeTugu
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: namaTugu
+      value: Tugu Simpang Lima
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.size
-      value: 5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[0].judulSubtema
+      value: Nama Bilangan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[0].minigameList
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[1].judulSubtema
+      value: ' Tumbuh dan Berkembang'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[1].minigameList
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[2].judulSubtema
+      value: Penyebutan Lambang Sila
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
+      propertyPath: minigameSelects.Array.data[2].minigameList
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402317, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: minigameSelects.Array.data[3].judulSubtema
@@ -9203,7 +9505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.93
+      value: -35.8
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9211,7 +9513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.59
+      value: 32.8
       objectReference: {fileID: 0}
     - target: {fileID: 5125027794367402318, guid: 113d8429455dc1a41a29e7b36f0ec76b, type: 3}
       propertyPath: m_LocalRotation.w
