@@ -290,8 +290,16 @@ public class PlusMinus_Gameplay : MonoBehaviour
     }
     void UpdateselectBilangan()
     {
-        float a = bilanganBersusuns[1].GetComponent<RectTransform>().localPosition.x;
-        float b = a * urutBilangan + bilanganBersusuns[1].transform.parent.GetComponent<RectTransform>().localPosition.x;
+ 
+
+        float a = 0;
+        float b = 0;
+        if (bilanganBersusuns.Length > 1)
+        {
+            print("UpdateSe");
+            a = bilanganBersusuns[urutBilangan].GetComponent<RectTransform>().localPosition.x;
+            b = a;
+        }
 
         selectBilangan.localPosition = new Vector3(b, selectBilangan.localPosition.y, 0);
 

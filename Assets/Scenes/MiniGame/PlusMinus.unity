@@ -425,21 +425,21 @@ MonoBehaviour:
   - soal1: 
     soal2: 
     operatorAritmatik: 0
-  - soal1: 353
-    soal2: --3
+  - soal1: 2
+    soal2: 5
     operatorAritmatik: 2
-  - soal1: 5656
-    soal2: 2345
-    operatorAritmatik: 0
-  - soal1: 4363
-    soal2: 3463
-    operatorAritmatik: 0
-  - soal1: 4363
-    soal2: 3463
-    operatorAritmatik: 0
-  - soal1: 2351
-    soal2: 9803
-    operatorAritmatik: 0
+  - soal1: 3
+    soal2: 6
+    operatorAritmatik: 2
+  - soal1: 15
+    soal2: -3
+    operatorAritmatik: 2
+  - soal1: 10
+    soal2: -6
+    operatorAritmatik: 2
+  - soal1: 230
+    soal2: --2
+    operatorAritmatik: 2
 --- !u!1 &332851993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,7 +1590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028128584
@@ -1610,7 +1610,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: -450
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -2246,21 +2246,21 @@ MonoBehaviour:
   - soal1: 
     soal2: 
     operatorAritmatik: 0
-  - soal1: 
-    soal2: 
+  - soal1: 1340
+    soal2: 2495
     operatorAritmatik: 0
-  - soal1: 
-    soal2: 
+  - soal1: 2540
+    soal2: 1507
     operatorAritmatik: 0
-  - soal1: 
-    soal2: 
+  - soal1: 2500
+    soal2: 1500
     operatorAritmatik: 0
-  - soal1: 
-    soal2: 
-    operatorAritmatik: 0
-  - soal1: 
-    soal2: 
-    operatorAritmatik: 0
+  - soal1: 4352
+    soal2: 3422
+    operatorAritmatik: 1
+  - soal1: 3200
+    soal2: 1100
+    operatorAritmatik: 1
 --- !u!1001 &1611146483
 PrefabInstance:
   m_ObjectHideFlags: 0
