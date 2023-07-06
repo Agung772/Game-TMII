@@ -39,7 +39,8 @@ public class PlusMinus_Gameplay : MonoBehaviour
 
 
         StartSoal();
-
+        int soal2 = int.Parse(soal.soalList[soalIndex].soal2);
+        print(soal2);
 
     }
     private void Update()
@@ -77,6 +78,7 @@ public class PlusMinus_Gameplay : MonoBehaviour
 
             string tempSoal2Index = "";
             tempSoal2Index += tempSoal2[i];
+            if (tempSoal2Index == "-") tempSoal2Index = "";
 
             temp.GetComponent<PlusMinus_BilanganBersusun>().soalAtasText.text = tempSoal1Index;
             temp.GetComponent<PlusMinus_BilanganBersusun>().soalBawahText.text = tempSoal2Index;
@@ -102,9 +104,9 @@ public class PlusMinus_Gameplay : MonoBehaviour
         IEnumerator Coroutine()
         {
             yield return new WaitForSeconds(0.01f);
+            bilanganBersusuns = new PlusMinus_BilanganBersusun[PlusMinus_UI.instance.bilanganBersusunParent.childCount];
             for (int i = 0; i < PlusMinus_UI.instance.bilanganBersusunParent.childCount; i++)
             {
-                print(i);
                 bilanganBersusuns[i] = PlusMinus_UI.instance.bilanganBersusunParent.GetChild(i).GetComponent<PlusMinus_BilanganBersusun>();
 
                 if (i == PlusMinus_UI.instance.bilanganBersusunParent.childCount - 1)
@@ -127,18 +129,24 @@ public class PlusMinus_Gameplay : MonoBehaviour
         {
             int tempInput = int.Parse(outputJawaban);
 
+            int soal1 = int.Parse(soal.soalList[soalIndex].soal1);
+            int soal2 = int.Parse(soal.soalList[soalIndex].soal2);
+
             int jawabanBenar = 0;
             if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Tambah)
             {
-                jawabanBenar = soal.soalList[soalIndex].soal1 + soal.soalList[soalIndex].soal2;
+                jawabanBenar = soal1 + soal2;
             }
             else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kurang)
             {
-                jawabanBenar = soal.soalList[soalIndex].soal1 - soal.soalList[soalIndex].soal2;
+
+                if (soal2 < 0) { soal2 = soal2 - soal2 - soal2; }
+                jawabanBenar = soal1 - soal2;
+                print(soal2);
             }
             else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kali)
             {
-                jawabanBenar = soal.soalList[soalIndex].soal1 * soal.soalList[soalIndex].soal2;
+                jawabanBenar = soal1 * soal2;
             }
 
             print(tempInput);
@@ -178,9 +186,16 @@ public class PlusMinus_Gameplay : MonoBehaviour
             //Input jawaban untuk pengurangan ------------------------------------------------------
             else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kurang)
             {
+                int soalNaik = 0;
+                if (bilanganBersusuns[urutBilangan].naikText.text != "") soalNaik = int.Parse(bilanganBersusuns[urutBilangan].naikText.text);
+                else soalNaik = 0;
+
                 int soalAtas = int.Parse(bilanganBersusuns[urutBilangan].soalAtasText.text);
-                int soalBawah = int.Parse(bilanganBersusuns[urutBilangan].soalBawahText.text);
-                if ((soalAtas - soalBawah) < 0 && urutBilangan < bilanganBersusuns.Length - 1)
+                int soalBawah = 0;
+                if (bilanganBersusuns[urutBilangan].soalBawahText.text != "") 
+                soalBawah = int.Parse(bilanganBersusuns[urutBilangan].soalBawahText.text);
+                print(((soalNaik + soalAtas) - soalBawah));
+                if (((soalNaik + soalAtas) - soalBawah) < 0 && urutBilangan < bilanganBersusuns.Length - 1)
                 {
                     bilanganBersusuns[urutBilangan + 1].naikText.text = "-1";
                 }

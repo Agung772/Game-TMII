@@ -14,8 +14,8 @@ public class PlusMinus_Soal : MonoBehaviour
     [System.Serializable]
     public struct SoalList
     {
-        public int soal1;
-        public int soal2;
+        public string soal1;
+        public string soal2;
         public OperatorAritmatik operatorAritmatik;
     }
 
