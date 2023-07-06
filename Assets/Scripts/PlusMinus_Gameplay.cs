@@ -113,6 +113,7 @@ public class PlusMinus_Gameplay : MonoBehaviour
 
         }
 
+
         StartCoroutine(Coroutine());
         IEnumerator Coroutine()
         {
@@ -121,28 +122,15 @@ public class PlusMinus_Gameplay : MonoBehaviour
             for (int i = 0; i < PlusMinus_UI.instance.bilanganBersusunParent.childCount; i++)
             {
                 bilanganBersusuns[i] = PlusMinus_UI.instance.bilanganBersusunParent.GetChild(i).GetComponent<PlusMinus_BilanganBersusun>();
-
-                if (i == PlusMinus_UI.instance.bilanganBersusunParent.childCount - 1)
-                {
-                    bilanganBersusuns[i].jawabanInput.onEndEdit.AddListener(CheckJawaban);
-                }
             }
 
             urutBilangan = 0;
             UpdateselectBilangan();
-        }
 
-        //Set bilangan bersusun
+            //Set UI
+            PlusMinus_UI.instance.jumlahSoalText.text = soalIndex + "/5";
 
-
-    }
-    public void CheckJawaban(string inputJawaban)
-    {
-        if (inputJawaban != "")
-        {
-            int tempInput = int.Parse(outputJawaban);
-
-            //Convert to int
+            //Sel soal
             string tempSoal2 = "";
             int soal2 = 0;
 
@@ -151,39 +139,56 @@ public class PlusMinus_Gameplay : MonoBehaviour
                 if (Char.IsDigit(soal.soalList[soalIndex].soal2[i]))
                     tempSoal2 += soal.soalList[soalIndex].soal2[i];
             }
-
-
-            //Get int
-            int soal1 = int.Parse(soal.soalList[soalIndex].soal1);
             int.TryParse(tempSoal2, out soal2);
+            PlusMinus_UI.instance.soalText.text = soal.soalList[soalIndex].soal1 + " " + bilanganBersusuns[0].operatorAritmatikText.text + " " + soal2;
+        }
+    }
+    public void CheckJawaban()
+    {
+        int tempInput = int.Parse(outputJawaban);
 
-            int jawabanBenar = 0;
-            if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Tambah)
-            {
-                jawabanBenar = soal1 + soal2;
-            }
-            else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kurang)
-            {
+        //Convert to int
+        string tempSoal2 = "";
+        int soal2 = 0;
 
-                if (soal2 < 0) { soal2 = soal2 - soal2 - soal2; }
-                jawabanBenar = soal1 - soal2;
-                print(soal2);
-            }
-            else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kali)
-            {
-                jawabanBenar = soal1 * soal2;
-            }
+        for (int i = 0; i < soal.soalList[soalIndex].soal2.Length; i++)
+        {
+            if (Char.IsDigit(soal.soalList[soalIndex].soal2[i]))
+                tempSoal2 += soal.soalList[soalIndex].soal2[i];
+        }
 
-            print(tempInput);
-            print(jawabanBenar);
-            if (tempInput == jawabanBenar)
-            {
-                print("Jawaban benar");
-            }
-            else
-            {
-                print("Jawaban salah");
-            }
+
+        //Get int
+        int soal1 = int.Parse(soal.soalList[soalIndex].soal1);
+        int.TryParse(tempSoal2, out soal2);
+
+        int jawabanBenar = 0;
+        if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Tambah)
+        {
+            jawabanBenar = soal1 + soal2;
+        }
+        else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kurang)
+        {
+
+            if (soal2 < 0) { soal2 = soal2 - soal2 - soal2; }
+            jawabanBenar = soal1 - soal2;
+            print(soal2);
+        }
+        else if (soal.soalList[soalIndex].operatorAritmatik == PlusMinus_Soal.OperatorAritmatik.Kali)
+        {
+            jawabanBenar = soal1 * soal2;
+        }
+
+        print(tempInput);
+        print(jawabanBenar);
+        if (tempInput == jawabanBenar)
+        {
+            print("Jawaban benar");
+            StartSoal();
+        }
+        else
+        {
+            print("Jawaban salah");
         }
 
 
