@@ -8,8 +8,7 @@ public class PlusMinus_Soal : MonoBehaviour
     {
         Tambah,
         Kurang,
-        Kali,
-        Bagi
+        Kali
     }
     [System.Serializable]
     public struct SoalList
