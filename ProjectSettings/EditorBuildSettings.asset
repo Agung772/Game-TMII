@@ -122,4 +122,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGame/PilihanGanda/Papua_PilihanGanda.unity
     guid: 3413735c5aa3f4f44944f431efd40a71
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/HubungkanTitik/Jawa_HubungkanTitik.unity
+    guid: 878eb9ad30c83ad499c96af98ac17559
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/HubungkanTitik/Kalimantan_HubungkanTitik.unity
+    guid: 7f826c5356c2c074aa020afa3aad6783
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/HubungkanTitik/Papua_HubungkanTitik.unity
+    guid: 62807c9c2d462624c8c2f4ab421f004b
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/HubungkanTitik/Sulawesi_HubungkanTitik.unity
+    guid: 5c6f689c3190ce04282dee0f0aa2dd3e
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/HubungkanTitik/Sumatera_HubungkanTitik.unity
+    guid: 0c1e370fbdf848340ae0c96e33945b7a
   m_configObjects: {}

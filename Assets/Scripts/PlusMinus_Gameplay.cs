@@ -9,6 +9,8 @@ public class PlusMinus_Gameplay : MonoBehaviour
     public static PlusMinus_Gameplay instance;
 
     public int soalIndex;
+    public int nyawa;
+
 
     public RectTransform selectBilangan;
     public PlusMinus_BilanganBersusun[] bilanganBersusuns;
@@ -145,7 +147,17 @@ public class PlusMinus_Gameplay : MonoBehaviour
     }
     public void CheckJawaban()
     {
-        int tempInput = int.Parse(outputJawaban);
+        int tempInput = 0;
+        if (outputJawaban != "")
+        {
+            tempInput = int.Parse(outputJawaban);
+        }
+        else
+        {
+            UIManager.instance.SpawnNotif("Masukan jawaban kamu");
+            return;
+        }
+
 
         //Convert to int
         string tempSoal2 = "";
@@ -184,11 +196,22 @@ public class PlusMinus_Gameplay : MonoBehaviour
         if (tempInput == jawabanBenar)
         {
             print("Jawaban benar");
-            StartSoal();
+            if (soalIndex > 5)
+            {
+                Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._PlusMinus, nyawa);
+            }
+            else
+            {
+                StartSoal();
+
+                Minigame_UI.instance.MiniscoreUI(true);
+            }
         }
         else
         {
             print("Jawaban salah");
+            Minigame_UI.instance.MiniscoreUI(false);
+            ResetJawaban();
         }
 
 
@@ -249,13 +272,6 @@ public class PlusMinus_Gameplay : MonoBehaviour
                     bilanganBersusuns[urutBilangan].jawabanInput.text = temp1.ToString();
                 }
             }
-
-            //Get jawaban dari semua bilangan sususan ------------------------------------------------------
-            outputJawaban = null;
-            for (int i = bilanganBersusuns.Length - 1; i > -1; i--)
-            {
-                outputJawaban += bilanganBersusuns[i].jawabanInput.text;
-            }
         }
         else
         {
@@ -267,7 +283,29 @@ public class PlusMinus_Gameplay : MonoBehaviour
 
         }
 
+        //Get jawaban dari semua bilangan sususan ------------------------------------------------------
+        outputJawaban = null;
+        for (int i = bilanganBersusuns.Length - 1; i > -1; i--)
+        {
+            outputJawaban += bilanganBersusuns[i].jawabanInput.text;
+        }
+    }
 
+    public void ResetJawaban()
+    {
+        for (int i = 0; i < bilanganBersusuns.Length; i++)
+        {
+            bilanganBersusuns[i].ResetJawaban();
+        }
+
+        outputJawaban = "";
+
+
+        //Hapus penaikan bilangan ------------------------------------------------------
+        if (urutBilangan < bilanganBersusuns.Length - 1)
+        {
+            bilanganBersusuns[urutBilangan + 1].naikText.text = "";
+        }
     }
 
     public void RightButton()
