@@ -534,6 +534,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5537889372641846493, guid: 9bdd844d93b340f4cb0de03a55f999da, type: 3}
+      propertyPath: tugu.Array.data[0]
+      value: 
+      objectReference: {fileID: 93349221}
+    - target: {fileID: 5537889372641846493, guid: 9bdd844d93b340f4cb0de03a55f999da, type: 3}
+      propertyPath: tugu.Array.data[1]
+      value: 
+      objectReference: {fileID: 93349221}
+    - target: {fileID: 5537889372641846493, guid: 9bdd844d93b340f4cb0de03a55f999da, type: 3}
+      propertyPath: tugu.Array.data[2]
+      value: 
+      objectReference: {fileID: 1728953113}
+    - target: {fileID: 5537889372641846493, guid: 9bdd844d93b340f4cb0de03a55f999da, type: 3}
+      propertyPath: tugu.Array.data[3]
+      value: 
+      objectReference: {fileID: 99106580}
+    - target: {fileID: 5537889372641846493, guid: 9bdd844d93b340f4cb0de03a55f999da, type: 3}
+      propertyPath: tugu.Array.data[4]
+      value: 
+      objectReference: {fileID: 794603877}
+    - target: {fileID: 5537889372641846493, guid: 9bdd844d93b340f4cb0de03a55f999da, type: 3}
+      propertyPath: tugu.Array.data[5]
+      value: 
+      objectReference: {fileID: 1261619618}
     - target: {fileID: 5537889373406411283, guid: 9bdd844d93b340f4cb0de03a55f999da, type: 3}
       propertyPath: m_Pivot.x
       value: 0
