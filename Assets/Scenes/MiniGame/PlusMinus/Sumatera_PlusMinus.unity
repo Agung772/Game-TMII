@@ -377,20 +377,20 @@ MonoBehaviour:
   - soal1: 
     soal2: 
     operatorAritmatik: 0
-  - soal1: 
-    soal2: 
+  - soal1: 1000
+    soal2: 1000
     operatorAritmatik: 0
-  - soal1: 
-    soal2: 
+  - soal1: 1000
+    soal2: 1000
     operatorAritmatik: 0
-  - soal1: 
-    soal2: 
+  - soal1: 1000
+    soal2: 1000
     operatorAritmatik: 0
-  - soal1: 
-    soal2: 
+  - soal1: 1000
+    soal2: 1000
     operatorAritmatik: 0
-  - soal1: 
-    soal2: 
+  - soal1: 1000
+    soal2: 1000
     operatorAritmatik: 0
 --- !u!1 &1331848682
 GameObject:

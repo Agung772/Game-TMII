@@ -196,7 +196,7 @@ public class PlusMinus_Gameplay : MonoBehaviour
         if (tempInput == jawabanBenar)
         {
             print("Jawaban benar");
-            if (soalIndex > 5)
+            if (soalIndex == 5)
             {
                 Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._PlusMinus, nyawa);
             }

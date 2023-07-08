@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soalIndex: 0
-  nyawa: 0
+  nyawa: 3
   selectBilangan: {fileID: 6317630834802327225}
   bilanganBersusuns:
   - {fileID: 6656480810227192550}
