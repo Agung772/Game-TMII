@@ -13,6 +13,7 @@ public class Minigame : MonoBehaviour
     public float score_Bilangan;
     public float score_HubungkanTitik;
     public float score_PlusMinus;
+    public float score_BenarSalah;
 
     [HideInInspector]
     public string
@@ -24,7 +25,8 @@ public class Minigame : MonoBehaviour
     _PilihanGanda = "_PilihanGanda",
     _Bilangan = "_Bilangan",
     _HubungkanTitik = "_HubungkanTitik",
-    _PlusMinus = "_PlusMinus";
+    _PlusMinus = "_PlusMinus",
+    _BenarSalah = "_BenarSalah";
 
     public void LoadData()
     {
@@ -37,6 +39,7 @@ public class Minigame : MonoBehaviour
         score_Bilangan = PlayerPrefs.GetFloat(_Bilangan);
         score_HubungkanTitik = PlayerPrefs.GetFloat(_HubungkanTitik);
         score_PlusMinus = PlayerPrefs.GetFloat(_PlusMinus);
+        score_BenarSalah = PlayerPrefs.GetFloat(_BenarSalah);
     }
 
     public void SaveMinigame(string namaMinigame, int score)
@@ -85,6 +88,11 @@ public class Minigame : MonoBehaviour
         {
             PlayerPrefs.SetFloat(_PlusMinus, score);
             score_PlusMinus = score;
+        }        
+        else if (namaMinigame == _BenarSalah && score > score_BenarSalah)
+        {
+            PlayerPrefs.SetFloat(_BenarSalah, score);
+            score_BenarSalah = score;
         }
     }
 }

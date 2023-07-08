@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PilihanGanda_Gameplay : MonoBehaviour
+public class BenarSalah_Gameplay : MonoBehaviour
 {
-    public static PilihanGanda_Gameplay instance;
+    public static BenarSalah_Gameplay instance;
 
     public int nyawa;
 
@@ -12,9 +12,9 @@ public class PilihanGanda_Gameplay : MonoBehaviour
 
     [SerializeField] GameObject canvaSoalTemplate;
 
-    [SerializeField] PilihanGanda_Soal[] tugu;
+    [SerializeField] BenarSalah_Soal[] tugu;
 
-    PilihanGanda_Soal soal;
+    BenarSalah_Soal soal;
     private void Awake()
     {
         instance = this;
@@ -35,7 +35,7 @@ public class PilihanGanda_Gameplay : MonoBehaviour
         }
 
         soal.gameObject.SetActive(true);
-        PilihanGanda_UI.instance.SetNyawa(nyawa);
+        BenarSalah_UI.instance.SetNyawa(nyawa);
 
         canvaSoalTemplate.SetActive(false);
 
@@ -48,26 +48,23 @@ public class PilihanGanda_Gameplay : MonoBehaviour
 
         if (soalIndex == soal.soalList.Length - 1)
         {
-            Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._PilihanGanda, nyawa);
+            Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._BenarSalah, nyawa);
         }
         else
         {
-            PilihanGanda_UI.instance.jumlahSoalText.text = "0" + soalIndex;
+            BenarSalah_UI.instance.jumlahSoalText.text = "0" + soalIndex;
 
             GameObject tempSoal = Instantiate(canvaSoalTemplate, transform);
 
             tempSoal.SetActive(true);
 
-            var canvaSoal = tempSoal.GetComponent<PilihanGanda_CanvaSoal>();
+            var canvaSoal = tempSoal.GetComponent<BenarSalah_CanvaSoal>();
 
             canvaSoal.soalText.text = soal.soalList[soalIndex].soal;
-            canvaSoal.jawabanBenar = soal.soalList[soalIndex].jawabanBenar;
-            canvaSoal.jawaban1.text = soal.soalList[soalIndex].jawaban1;
-            canvaSoal.jawaban2.text = soal.soalList[soalIndex].jawaban2;
-            canvaSoal.jawaban3.text = soal.soalList[soalIndex].jawaban3;
-
-            canvaSoal.RandomJawaban();
+            canvaSoal.benar = soal.soalList[soalIndex].benar;
         }
+
+
     }
 
     public void JawabanBenar()
@@ -78,16 +75,16 @@ public class PilihanGanda_Gameplay : MonoBehaviour
     public void JawabanSalah()
     {
         nyawa--;
-        PilihanGanda_UI.instance.SetNyawa(nyawa);
+        BenarSalah_UI.instance.SetNyawa(nyawa);
 
         if (nyawa == 0)
         {
-            Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._PilihanGanda, nyawa);
+            Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._BenarSalah, nyawa);
         }
         else
         {
-            Minigame_UI.instance.MiniscoreUI(false);
             StartSoal();
+            Minigame_UI.instance.MiniscoreUI(false);
         }
 
     }
