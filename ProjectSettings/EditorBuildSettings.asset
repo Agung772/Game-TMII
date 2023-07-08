@@ -137,4 +137,49 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGame/HubungkanTitik/Sumatera_HubungkanTitik.unity
     guid: 0c1e370fbdf848340ae0c96e33945b7a
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PlusMinus/Jawa_PlusMinus.unity
+    guid: 9a46010f01882864fb7926f6d43d934a
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PlusMinus/Kalimantan_PlusMinus.unity
+    guid: ad04da6e8c8891c42b12f5983d3eec34
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PlusMinus/Papua_PlusMinus.unity
+    guid: a932b0c55ebfec642aa54b181cf2c58b
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PlusMinus/Sulawesi_PlusMinus.unity
+    guid: b3893e4f61a733d4983861e9c6f36659
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/PlusMinus/Sumatera_PlusMinus.unity
+    guid: 01ec32b888c0793499a10956e1a39913
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/BenarSalah/Jawa_BenarSalah.unity
+    guid: c62541b5de5f0ec4e9ef8a24c0ca49e4
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/BenarSalah/Kalimantan_BenarSalah.unity
+    guid: cdbd400bf4cd63e428270af862f0237e
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/BenarSalah/Papua_BenarSalah.unity
+    guid: 24e33c1ad1514d644ac70c8902586682
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/BenarSalah/Sulawesi_BenarSalah.unity
+    guid: d271b722e4ec9d048863b4aef975d13d
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/BenarSalah/Sumatera_BenarSalah.unity
+    guid: c7ff5dc57260f5640a5be69ac59a78bd
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Bilangan/Jawa_Bilangan.unity
+    guid: 7515953b6d37e1a42892e9b33e38a772
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Bilangan/Kalimantan_Bilangan.unity
+    guid: fc9df8a643a1169499c639d224c6a7ba
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Bilangan/Papua_Bilangan.unity
+    guid: 7405a6922496cda4dbec704c447e23c3
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Bilangan/Sulawesi_Bilangan.unity
+    guid: 69b1001fe77bfc44989b37288da14f9c
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/Bilangan/Sumatera_Bilangan.unity
+    guid: 7ed52d6c9b01694468004ccd9bd3b3ca
   m_configObjects: {}

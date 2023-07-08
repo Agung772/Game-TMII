@@ -46,7 +46,7 @@ public class BenarSalah_Gameplay : MonoBehaviour
     {
         soalIndex++;
 
-        if (soalIndex == soal.soalList.Length - 1)
+        if (soalIndex == soal.soalList.Length)
         {
             Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._BenarSalah, nyawa);
         }
@@ -69,7 +69,15 @@ public class BenarSalah_Gameplay : MonoBehaviour
 
     public void JawabanBenar()
     {
-        Minigame_UI.instance.MiniscoreUI(true);
+        if (soalIndex == soal.soalList.Length - 1)
+        {
+
+        }
+        else
+        {
+            Minigame_UI.instance.MiniscoreUI(true);
+        }
+
         StartSoal();
     }
     public void JawabanSalah()
