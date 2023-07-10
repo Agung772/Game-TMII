@@ -9,13 +9,13 @@ public class BarisBilangan_Player : MonoBehaviour
 
 
     float distance;
+
     private void Start()
     {
         var content = BarisBilangan_UI.instance.content;
         distance = content.GetComponent<GridLayoutGroup>().spacing.x + content.GetComponent<GridLayoutGroup>().cellSize.x;
 
-        content.GetComponent<RectTransform>().localPosition = new Vector2((-nomor + 15) * distance, content.transform.GetComponent<RectTransform>().localPosition.y);
-        print(-nomor + 15);
+        UpdatePosisiTempat();
     }
     private void Update()
     {
@@ -31,5 +31,10 @@ public class BarisBilangan_Player : MonoBehaviour
         nomor--;
     }
 
-
+    void UpdatePosisiTempat()
+    {
+        var content = BarisBilangan_UI.instance.content;
+        content.GetComponent<RectTransform>().localPosition = new Vector2((-nomor + 15) * distance, content.transform.GetComponent<RectTransform>().localPosition.y);
+        print(-nomor + 15);
+    }
 }
