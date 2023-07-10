@@ -1,18 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BarisBilangan_Tempat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public TextMeshProUGUI nomorTempatText;
+    private void OnValidate()
     {
-        
-    }
+        string nomorTempat = "";
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        for (int i = 0; i < name.Length; i++)
+        {
+            if (Char.IsDigit(name[i]))
+                nomorTempat += name[i];
+        }
+
+        nomorTempatText.text = nomorTempat;
     }
 }
