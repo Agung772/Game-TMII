@@ -37,6 +37,10 @@ public class PlusMinus_Gameplay : MonoBehaviour
         {
             soal = tugu[(int)DataGame.instance.codeTugu];
         }
+        else
+        {
+            soal = tugu[(int)DataGame.instance.codeTugu];
+        }
         soal.gameObject.SetActive(true);
 
 

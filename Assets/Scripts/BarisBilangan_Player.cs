@@ -1,18 +1,105 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BarisBilangan_Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static BarisBilangan_Player instance;
+
+    public int nomor;
+    public int posisiContent;
+    public int posisiPlayer;
+    public int maxPosPlayer;
+    
+    float distance;
+
+    [SerializeField] Transform design2D;
+
+    private void Awake()
     {
-        
+        instance = this;
+    }
+    private void Start()
+    {
+        var content = BarisBilangan_UI.instance.content;
+        distance = content.GetComponent<GridLayoutGroup>().spacing.x + content.GetComponent<GridLayoutGroup>().cellSize.x;
+
+        posisiContent = nomor;
+
+        UpdatePosisiTempat();
+
+
+    }
+    private void Update()
+    {
+        UpdatePosisiPlayer();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RightButton()
     {
-        
+        if (posisiPlayer == maxPosPlayer)
+        {
+            if (posisiContent < BarisBilangan_UI.instance.content.transform.childCount - 4)
+            {
+                posisiContent++;
+            }
+            else
+            {
+                posisiPlayer++;
+            }
+
+        }
+
+        if (posisiPlayer < maxPosPlayer)
+        {
+            posisiPlayer++;
+        }
+
+        if (nomor < BarisBilangan_UI.instance.content.transform.childCount -1)
+        {
+            nomor++;
+        }
+
+        design2D.localEulerAngles = Vector2.zero;
+        UpdatePosisiTempat();
+    }
+    public void LeftButton()
+    {
+        if (posisiPlayer == -maxPosPlayer)
+        {
+            if (posisiContent > 4)
+            {
+                posisiContent--;
+            }
+            else
+            {
+                posisiPlayer--;
+            }
+
+        }
+
+        if (posisiPlayer > -maxPosPlayer)
+        {
+            posisiPlayer--;
+        }
+
+        if (nomor > 1)
+        {
+            nomor--;
+        }
+        design2D.localEulerAngles = Vector2.down * 180;
+        UpdatePosisiTempat();
+    }
+    void UpdatePosisiPlayer()
+    {
+        RectTransform rectTransform = GetComponent<RectTransform>();
+        rectTransform.localPosition = Vector3.Lerp(rectTransform.localPosition, new Vector2(posisiPlayer * distance, rectTransform.localPosition.y), 5 * Time.deltaTime);
+    }
+    void UpdatePosisiTempat()
+    {
+        var content = BarisBilangan_UI.instance.content;
+        content.GetComponent<RectTransform>().localPosition = new Vector2((-posisiContent + 15) * distance, content.transform.GetComponent<RectTransform>().localPosition.y);
+        print(-posisiContent + 15);
     }
 }
