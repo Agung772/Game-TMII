@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class BarisBilangan_UI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static BarisBilangan_UI instance;
 
-    // Update is called once per frame
-    void Update()
+    public GameObject content;
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 }
