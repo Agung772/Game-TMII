@@ -330,6 +330,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasMinigame
       objectReference: {fileID: 0}
+    - target: {fileID: 2529675508622401224, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103784912418599640, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
 --- !u!1 &917014595
@@ -691,6 +699,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3023268928461939877, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023268928461939877, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023268928461939877, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023268928623711887, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023268928623711887, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023268928979627112, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023268928979627112, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023268928979627112, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023268929126983630, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023268929126983630, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023268929126983630, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3023268929286336464, guid: 56577bd609e5ea6418004c5f4ab5ca84, type: 3}
       propertyPath: tugu.Array.data[0]
       value: 
