@@ -1,0 +1,5 @@
+Letak asset 
+Folder 2D --> (Nama pulau) --> (Nama minigame)
+
+Letak Animator controller & Animation
+Folder Animations --> (Nama pulau) --> (Nama minigame)
