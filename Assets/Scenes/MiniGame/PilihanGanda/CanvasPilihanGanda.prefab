@@ -200,8 +200,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 01
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e3f8ff24277629429eb0354e9a61d5c, type: 2}
-  m_sharedMaterial: {fileID: 8361330053466938170, guid: 2e3f8ff24277629429eb0354e9a61d5c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c4e4aa4f198e9447ab3f98b5be828b4, type: 2}
+  m_sharedMaterial: {fileID: -1502038880830592365, guid: 0c4e4aa4f198e9447ab3f98b5be828b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -543,8 +543,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e3f8ff24277629429eb0354e9a61d5c, type: 2}
-  m_sharedMaterial: {fileID: 8361330053466938170, guid: 2e3f8ff24277629429eb0354e9a61d5c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c4e4aa4f198e9447ab3f98b5be828b4, type: 2}
+  m_sharedMaterial: {fileID: -1502038880830592365, guid: 0c4e4aa4f198e9447ab3f98b5be828b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -574,7 +574,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -885,8 +885,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e3f8ff24277629429eb0354e9a61d5c, type: 2}
-  m_sharedMaterial: {fileID: 8361330053466938170, guid: 2e3f8ff24277629429eb0354e9a61d5c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c4e4aa4f198e9447ab3f98b5be828b4, type: 2}
+  m_sharedMaterial: {fileID: -1502038880830592365, guid: 0c4e4aa4f198e9447ab3f98b5be828b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1019,8 +1019,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e3f8ff24277629429eb0354e9a61d5c, type: 2}
-  m_sharedMaterial: {fileID: 8361330053466938170, guid: 2e3f8ff24277629429eb0354e9a61d5c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c4e4aa4f198e9447ab3f98b5be828b4, type: 2}
+  m_sharedMaterial: {fileID: -1502038880830592365, guid: 0c4e4aa4f198e9447ab3f98b5be828b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2022,8 +2022,8 @@ MonoBehaviour:
   m_text: 'Lorem ipsum dolor sit amet. Est autem cumque et dolorem libero ea voluptatem
     voluptates in Quis iure et odio repellendus! '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e3f8ff24277629429eb0354e9a61d5c, type: 2}
-  m_sharedMaterial: {fileID: 8361330053466938170, guid: 2e3f8ff24277629429eb0354e9a61d5c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c4e4aa4f198e9447ab3f98b5be828b4, type: 2}
+  m_sharedMaterial: {fileID: -1502038880830592365, guid: 0c4e4aa4f198e9447ab3f98b5be828b4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
