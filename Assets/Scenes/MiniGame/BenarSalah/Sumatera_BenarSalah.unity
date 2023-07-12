@@ -378,16 +378,41 @@ MonoBehaviour:
   soalList:
   - soal: 
     benar: 0
-  - soal: Blablabla
+  - soal: 'Ani dan Budi sedang bermain bola
+
+
+
+      Apakah Kalimat diatas kalimat
+      efektif?'
+    benar: 1
+  - soal: 'Ayahku memperjuangkan karirnya dengan baik
+
+
+
+      Apakah kalimat diatas
+      kalimat efektif?'
     benar: 0
-  - soal: Blablabla
+  - soal: 'Kalian dipersilakan masuk sekarang
+
+
+
+      Apakah kalimat diatas kalimat
+      efektif?'
     benar: 0
-  - soal: Blablabla
-    benar: 0
-  - soal: Blablabla
-    benar: 0
-  - soal: Blablabla
-    benar: 0
+  - soal: 'Rudi menyiram bunga mneggunakna air
+
+
+
+      Apakah kalimat diatas kalimat
+      efektif?'
+    benar: 1
+  - soal: 'Via sedang sakit sehingga tidak dapat membantu ibu
+
+
+
+      Apakah kalimat
+      diatas kalimat efektif?'
+    benar: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

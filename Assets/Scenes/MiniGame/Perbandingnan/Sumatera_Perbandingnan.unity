@@ -452,7 +452,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef733efa21056db46b496fe6e6748519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soal: []
+  soal:
+  - perbandingan: 0
+    bendaKiri: 0
+    bendaKanan: 0
+  - perbandingan: 2
+    bendaKiri: 7
+    bendaKanan: 9
 --- !u!1 &1455153356
 GameObject:
   m_ObjectHideFlags: 0

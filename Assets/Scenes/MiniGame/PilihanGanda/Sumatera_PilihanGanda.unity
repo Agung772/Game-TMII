@@ -172,31 +172,33 @@ MonoBehaviour:
     jawaban1: 
     jawaban2: 
     jawaban3: 
-  - soal: ddg dfgdfg dfgdfg df
+  - soal: Tahun lalu tinggi badan Wahyu adalah 100cm hal tersebut menandakan bahwa
+      Wahyu sedang mengalami
     jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
+    jawaban1: Pertumbuhan
+    jawaban2: Perkembangan
+    jawaban3: Perhatian
+  - soal: Setiap manusia mengalami pertumbuhan dan perkembangan dalam waktu yang
     jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
+    jawaban1: Bersamaan
+    jawaban2: Berbarengan
+    jawaban3: Berbeda-beda
+  - soal: Berikut ini yang merupakan perkembangan kecuali
     jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
+    jawaban1: Dapat berjalan
+    jawaban2: Dapat berbicara
+    jawaban3: Naik berat badan
+  - soal: Berikut adalah gerakan yang bisa dilakukan bayi 10 bulan adalah
     jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
+    jawaban1: Menaiki pohon
+    jawaban2: Merangkak dan berdiri
+    jawaban3: Berlari kencang
+  - soal: Saat tumbuh dari masa kanak-kanak ke masa remaja akan terjadi pertumbuhan
+      secara fisik dann perkembangan
     jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
+    jawaban1: Pola pikir
+    jawaban2: Tinggi badan
+    jawaban3: Panjang kaki
 --- !u!1 &93349219
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,31 +576,32 @@ MonoBehaviour:
     jawaban1: 
     jawaban2: 
     jawaban3: 
-  - soal: ddg dfgdfg dfgdfg df
+  - soal: '"Kemanusiaan yang adil dan beradab" Adalah bunyi sila ke ..... Pancasila'
+    jawabanBenar: 2
+    jawaban1: Satu
+    jawaban2: Dua
+    jawaban3: Tiga
+  - soal: Sila pertama pancasila dilambangkan dengan?
     jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
+    jawaban1: Bintang emas
+    jawaban2: Rantai
+    jawaban3: Pohon beringin
+  - soal: '"Ketuhanan yang maha esa" Adalah bunyi sila ke berapa?'
+    jawabanBenar: 3
+    jawaban1: Tiga
+    jawaban2: Dua
+    jawaban3: Satu
+  - soal: Apakah bunyi dari sila pertama?
     jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
-    jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
-    jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
-    jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
+    jawaban1: Ktuhanan yang maha esa
+    jawaban2: Persatuan Indonesia
+    jawaban3: Kemanusiaan yang adil dan beradab
+  - soal: Perilaku sehari-hari yang sesuai dengan pengamalan sila kedua pancasila
+      kecuali
+    jawabanBenar: 3
+    jawaban1: Menghormati orang yang lebih tua
+    jawaban2: Tidak membeda-bedakan sesama
+    jawaban3: Menghormati Agama lain
 --- !u!1 &1823158328
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,31 +651,31 @@ MonoBehaviour:
     jawaban1: 
     jawaban2: 
     jawaban3: 
-  - soal: ddg dfgdfg dfgdfg df
-    jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
-    jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
-    jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
-    jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
-  - soal: ddg dfgdfg dfgdfg df
-    jawabanBenar: 1
-    jawaban1: 1111
-    jawaban2: 2222
-    jawaban3: 3333
+  - soal: "6 \xF7 2"
+    jawabanBenar: 3
+    jawaban1: 2
+    jawaban2: 4
+    jawaban3: 3
+  - soal: "10 \xF7 5"
+    jawabanBenar: 2
+    jawaban1: 2
+    jawaban2: 5
+    jawaban3: 4
+  - soal: "40 \xF7 4"
+    jawabanBenar: 3
+    jawaban1: 30
+    jawaban2: 20
+    jawaban3: 10
+  - soal: "125 \xF7 5"
+    jawabanBenar: 3
+    jawaban1: 15
+    jawaban2: 20
+    jawaban3: 25
+  - soal: "200 \xF7 8"
+    jawabanBenar: 2
+    jawaban1: 30
+    jawaban2: 25
+    jawaban3: 20
 --- !u!1 &2008463785
 GameObject:
   m_ObjectHideFlags: 0
