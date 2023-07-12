@@ -53,23 +53,46 @@ public class BarisBilangan_Gameplay : MonoBehaviour
 
         BarisBilangan_Player.instance.nomor = soal.soalList[soalIndex].nomorAwal;
         BarisBilangan_Player.instance.posisiContent = soal.soalList[soalIndex].nomorAwal;
+        BarisBilangan_Player.instance.posisiPlayer = 0;
+        startWhile = false;
+
+        BarisBilangan_Player.instance.UpdatePosisiTempat();
     }
     public void CheckJawaban()
     {
         if (soal.soalList[soalIndex].nomorBenar == BarisBilangan_Player.instance.nomor)
         {
             print("Benar");
+            if (soalIndex == 5)
+            {
+                Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._BarisBilangan, nyawa);
+            }
+            else
+            {
+                Minigame_UI.instance.MiniscoreUI(true);
+                StartSoal();
+            }
+
         }
         else
         {
+            print("Salah");
             nyawa--;
             BarisBilangan_UI.instance.SetNyawa(nyawa);
-            print("Salah");
+
+            if (nyawa == 0)
+            {
+                Minigame_UI.instance.ScoreUI(DataGame.instance.minigame._BarisBilangan, nyawa);
+            }
+            else
+            {
+                Minigame_UI.instance.MiniscoreUI(false);
+            }
         }
     }
 
     int valueSebelumnya;
-    bool breakWhile;
+    bool breakWhile, startWhile;
     public void SetTempat(int value)
     {
         var content = BarisBilangan_Content.instance;
@@ -82,6 +105,7 @@ public class BarisBilangan_Gameplay : MonoBehaviour
         content.tempat[value].delayParent.SetActive(true);
         valueSebelumnya = value;
 
+        if (!startWhile) { startWhile = true; return; }
 
         StartCoroutine(Coroutine());
         IEnumerator Coroutine()
@@ -96,6 +120,10 @@ public class BarisBilangan_Gameplay : MonoBehaviour
                 if (m_waktuTempat <= 0)
                 {
                     CheckJawaban();
+
+                    m_waktuTempat = waktuTempat;
+                    content.tempat[value].delayImage.fillAmount = m_waktuTempat / waktuTempat;
+                    break;
                 }
 
                 yield return null;
