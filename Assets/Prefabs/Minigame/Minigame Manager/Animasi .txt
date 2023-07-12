@@ -1,0 +1,11 @@
+Animasi :
+- Daun (particle) # (beranda - sumatera - jawa)
+- Kupu-kupu (unity) #
+- Balon (particle) # (kalimantan - sulawesi - papua)
+- Sparkle (particle) (kalimantan - sulawesi - jawa)
+- Star (particle) 
+- Pita/confetti (particle) # (beranda - sumatera - papua)
+- Pita/confetti (particle) # (beranda - sumatera - papua)
+- Feather (particle)
+- Feather (unity)
+- Ray (Unity) (kalo menang) #
