@@ -7,6 +7,7 @@ public class PilihanGanda_Soal : MonoBehaviour
     [System.Serializable]
     public struct Soal
     {
+        [TextArea(3,10)]
         public string soal;
         public int jawabanBenar;
         public string jawaban1;

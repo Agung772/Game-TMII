@@ -351,15 +351,15 @@ MonoBehaviour:
   - audioSoal: {fileID: 0}
     jawaban: 
   - audioSoal: {fileID: 0}
-    jawaban: garuda
+    jawaban: amfibi
   - audioSoal: {fileID: 0}
-    jawaban: giridi
+    jawaban: unggas
   - audioSoal: {fileID: 0}
-    jawaban: garada
+    jawaban: mamalia
   - audioSoal: {fileID: 0}
-    jawaban: gerede
+    jawaban: reptil
   - audioSoal: {fileID: 0}
-    jawaban: gorodo
+    jawaban: pisces
 --- !u!4 &1045452777
 Transform:
   m_ObjectHideFlags: 0
@@ -456,15 +456,15 @@ MonoBehaviour:
   - audioSoal: {fileID: 0}
     jawaban: 
   - audioSoal: {fileID: 0}
-    jawaban: garuda
+    jawaban: amfibi
   - audioSoal: {fileID: 0}
-    jawaban: giridi
+    jawaban: unggas
   - audioSoal: {fileID: 0}
-    jawaban: garada
+    jawaban: mamalia
   - audioSoal: {fileID: 0}
-    jawaban: gerede
+    jawaban: reftil
   - audioSoal: {fileID: 0}
-    jawaban: gorodo
+    jawaban: pisces
 --- !u!1001 &2027906837
 PrefabInstance:
   m_ObjectHideFlags: 0

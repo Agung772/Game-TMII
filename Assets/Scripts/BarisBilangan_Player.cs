@@ -20,17 +20,7 @@ public class BarisBilangan_Player : MonoBehaviour
     {
         instance = this;
     }
-    private void Start()
-    {
-        var content = BarisBilangan_UI.instance.content;
-        distance = content.GetComponent<GridLayoutGroup>().spacing.x + content.GetComponent<GridLayoutGroup>().cellSize.x;
 
-        posisiContent = nomor;
-
-        UpdatePosisiTempat();
-
-
-    }
     private void Update()
     {
         UpdatePosisiPlayer();
@@ -94,12 +84,19 @@ public class BarisBilangan_Player : MonoBehaviour
     void UpdatePosisiPlayer()
     {
         RectTransform rectTransform = GetComponent<RectTransform>();
-        rectTransform.localPosition = Vector3.Lerp(rectTransform.localPosition, new Vector2(posisiPlayer * distance, rectTransform.localPosition.y), 5 * Time.deltaTime);
+        rectTransform.localPosition = Vector3.Lerp(rectTransform.localPosition, new Vector2(posisiPlayer * distance, rectTransform.localPosition.y), 10 * Time.deltaTime);
     }
-    void UpdatePosisiTempat()
+
+
+    public void UpdatePosisiTempat()
     {
         var content = BarisBilangan_UI.instance.content;
+
+        distance = content.GetComponent<GridLayoutGroup>().spacing.x + content.GetComponent<GridLayoutGroup>().cellSize.x;
+
         content.GetComponent<RectTransform>().localPosition = new Vector2((-posisiContent + 15) * distance, content.transform.GetComponent<RectTransform>().localPosition.y);
-        print(-posisiContent + 15);
+
+
+        BarisBilangan_Gameplay.instance.SetTempat(nomor);
     }
 }

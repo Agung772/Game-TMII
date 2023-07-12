@@ -699,20 +699,20 @@ MonoBehaviour:
   - soal: 
     jawaban: 
     ilustrasi: {fileID: 0}
-  - soal: 'Para ______ sedang membersihkan  taman bermain '
-    jawaban: Siswa
+  - soal: Budi _____ Rafi yang sedang kesusahan
+    jawaban: menolong
     ilustrasi: {fileID: 21300000, guid: 83b56b8b8ae5476479aa4572c9292314, type: 3}
-  - soal: 'Para ______ sedang membersihkan  taman bermain '
-    jawaban: Siswa
+  - soal: Para Siswa sedang membersihkan _____
+    jawaban: sekolah
     ilustrasi: {fileID: 21300000, guid: 83b56b8b8ae5476479aa4572c9292314, type: 3}
-  - soal: 'Para ______ sedang membersihkan  taman bermain '
-    jawaban: Siswa
+  - soal: Para warga sedang melakukan kerja _____ untuk membersihkan lingkungan
+    jawaban: bakti
     ilustrasi: {fileID: 21300000, guid: 83b56b8b8ae5476479aa4572c9292314, type: 3}
-  - soal: 'Para ______ sedang membersihkan  taman bermain '
-    jawaban: Siswa
+  - soal: Ketika membuat kesalahan, Surya sebaiknya meminta _____
+    jawaban: maaf
     ilustrasi: {fileID: 21300000, guid: 83b56b8b8ae5476479aa4572c9292314, type: 3}
-  - soal: 'Para ______ sedang membersihkan  taman bermain '
-    jawaban: Siswa
+  - soal: Sultan sedang makan malam dengan _____
+    jawaban: keluarga
     ilustrasi: {fileID: 21300000, guid: 83b56b8b8ae5476479aa4572c9292314, type: 3}
 --- !u!1001 &5404617025426614268
 PrefabInstance:
