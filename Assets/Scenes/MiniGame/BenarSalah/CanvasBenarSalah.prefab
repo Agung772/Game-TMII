@@ -1379,7 +1379,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5537889374019330396}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6564713994507010533}
+        m_TargetAssemblyTypeName: PauseUI, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5537889374019330386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1673,3 +1685,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4499807308381885445, guid: fe8043525c719e04bbb7339647b759fe, type: 3}
   m_PrefabInstance: {fileID: 7307101937385559527}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6564713994507010533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4499807308381885442, guid: fe8043525c719e04bbb7339647b759fe, type: 3}
+  m_PrefabInstance: {fileID: 7307101937385559527}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d97aa13edcd624a86b625d705840c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

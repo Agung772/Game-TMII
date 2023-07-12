@@ -2855,6 +2855,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6202548667830023435, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6245044487241345782, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2878,6 +2882,10 @@ PrefabInstance:
     - target: {fileID: 7163166642026342827, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
       propertyPath: m_LocalPosition.z
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580449314751564122, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8119274366958062504, guid: f80eed541ecd27446aaf6c32a553f809, type: 3}
       propertyPath: m_ScreenMatchMode
