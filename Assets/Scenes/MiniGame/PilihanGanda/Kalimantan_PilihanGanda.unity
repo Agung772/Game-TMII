@@ -440,6 +440,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasMinigame
       objectReference: {fileID: 0}
+    - target: {fileID: 2529675507987292810, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c7289546cf19d74dbfed54bed05fdd4, type: 3}
+    - target: {fileID: 2529675508622401224, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e573543a330ff3f44992b581eb03e1aa, type: 3}
 --- !u!1 &963194225
@@ -781,6 +789,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5077748074513260955, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d1938a91107b52143b121fbd03d8894a, type: 3}
+    - target: {fileID: 5077748074668789881, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -39
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077748074700613241, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d1938a91107b52143b121fbd03d8894a, type: 3}
+    - target: {fileID: 5077748074943585413, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1757.381
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077748074943585413, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 665.8826
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077748074943585413, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077748074943585414, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6cc6fcb4c87c2da448f946cd3cead1dd, type: 3}
+    - target: {fileID: 5077748075129352677, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d1938a91107b52143b121fbd03d8894a, type: 3}
+    - target: {fileID: 5077748075145106867, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d1b53b0eed3bde64d9fb9699894a3596, type: 3}
     - target: {fileID: 5077748075479884143, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
       propertyPath: tugu.Array.data[0]
       value: 
@@ -805,6 +849,22 @@ PrefabInstance:
       propertyPath: tugu.Array.data[5]
       value: 
       objectReference: {fileID: 1104376918}
+    - target: {fileID: 5077748075775763694, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 798b660e08e2ab04b9b980254485ea1b, type: 3}
+    - target: {fileID: 5077748076049588570, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 341.42856
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077748076049588570, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200.05582
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077748076049588571, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e5252559ca2435546a689b60e6c27a21, type: 3}
     - target: {fileID: 5077748076371787681, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -892,6 +952,10 @@ PrefabInstance:
     - target: {fileID: 5077748076371787693, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
       propertyPath: m_Name
       value: CanvasPilihanGanda
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077748076564238583, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58551e89e156c53468bb5d5336dc45ae, type: 3}

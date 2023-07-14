@@ -51,12 +51,19 @@ public class BarisBilangan_Gameplay : MonoBehaviour
         BarisBilangan_UI.instance.jumlahSoalText.text = soalIndex + "/5";
         BarisBilangan_UI.instance.soalText.text = soal.soalList[soalIndex].soal;
 
+        ResetSoal();
+    }
+
+    void ResetSoal()
+    {
         BarisBilangan_Player.instance.nomor = soal.soalList[soalIndex].nomorAwal;
         BarisBilangan_Player.instance.posisiContent = soal.soalList[soalIndex].nomorAwal;
         BarisBilangan_Player.instance.posisiPlayer = 0;
         startWhile = false;
 
         BarisBilangan_Player.instance.UpdatePosisiTempat();
+
+        BarisBilangan_Player.instance.design2D.localEulerAngles = Vector2.zero;
     }
     public void CheckJawaban()
     {
@@ -87,6 +94,7 @@ public class BarisBilangan_Gameplay : MonoBehaviour
             else
             {
                 Minigame_UI.instance.MiniscoreUI(false);
+                ResetSoal();
             }
         }
     }
