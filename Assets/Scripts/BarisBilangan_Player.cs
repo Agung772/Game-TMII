@@ -52,6 +52,8 @@ public class BarisBilangan_Player : MonoBehaviour
         }
 
         design2D.localEulerAngles = Vector2.zero;
+        design2D.GetComponent<Animator>().SetTrigger("Walk");
+
         UpdatePosisiTempat();
     }
     public void LeftButton()
@@ -79,12 +81,14 @@ public class BarisBilangan_Player : MonoBehaviour
             nomor--;
         }
         design2D.localEulerAngles = Vector2.down * 180;
+        design2D.GetComponent<Animator>().SetTrigger("Walk");
+
         UpdatePosisiTempat();
     }
     void UpdatePosisiPlayer()
     {
         RectTransform rectTransform = GetComponent<RectTransform>();
-        rectTransform.localPosition = Vector3.Lerp(rectTransform.localPosition, new Vector2(posisiPlayer * distance, rectTransform.localPosition.y), 10 * Time.deltaTime);
+        rectTransform.localPosition = Vector3.Lerp(rectTransform.localPosition, new Vector2(posisiPlayer * distance, rectTransform.localPosition.y), 6 * Time.deltaTime);
     }
 
 
@@ -98,5 +102,7 @@ public class BarisBilangan_Player : MonoBehaviour
 
 
         BarisBilangan_Gameplay.instance.SetTempat(nomor);
+
+
     }
 }
