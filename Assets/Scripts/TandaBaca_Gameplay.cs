@@ -99,7 +99,6 @@ public class TandaBaca_Gameplay : MonoBehaviour
             {
                 UIManager.instance.SpawnNotif("Isi semua jawaban");
                 return;
-                break;
             }
             else
             {
