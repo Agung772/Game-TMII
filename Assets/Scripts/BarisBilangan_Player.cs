@@ -14,7 +14,7 @@ public class BarisBilangan_Player : MonoBehaviour
     
     float distance;
 
-    [SerializeField] Transform design2D;
+    public Transform design2D;
 
     private void Awake()
     {
@@ -85,6 +85,7 @@ public class BarisBilangan_Player : MonoBehaviour
 
         UpdatePosisiTempat();
     }
+
     void UpdatePosisiPlayer()
     {
         RectTransform rectTransform = GetComponent<RectTransform>();

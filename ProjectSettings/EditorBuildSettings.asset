@@ -182,4 +182,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGame/Bilangan/Sumatera_Bilangan.unity
     guid: 7ed52d6c9b01694468004ccd9bd3b3ca
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/BarisBilangan/Jawa_BarisBilangan.unity
+    guid: 1e7121c984420b4468925798c7c25cbe
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/BarisBilangan/Kalimantan_BarisBilangan.unity
+    guid: 9592315389dc58440aad29c12c941ac5
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/BarisBilangan/Papua_BarisBilangan.unity
+    guid: cdafb527810ff8b4890daa900bbb6746
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/BarisBilangan/Sulawesi_BarisBilangan.unity
+    guid: 1993d22d50bf5714c9a6be63b104077a
+  - enabled: 1
+    path: Assets/Scenes/MiniGame/BarisBilangan/Sumatera_BarisBilangan.unity
+    guid: adbdc7c228be0d346aa530b3ac9cf92b
   m_configObjects: {}
