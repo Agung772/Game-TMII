@@ -802,6 +802,42 @@ PrefabInstance:
       propertyPath: tugu.Array.data[5]
       value: 
       objectReference: {fileID: 19558808}
+    - target: {fileID: 5576792924066597073, guid: 0b8de7ec1dd602e4c81c56bf590480ba, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -312
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576792924066597075, guid: 0b8de7ec1dd602e4c81c56bf590480ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 46e4a3d2620bfa74d8dae6164581de38, type: 3}
+    - target: {fileID: 5576792924089796640, guid: 0b8de7ec1dd602e4c81c56bf590480ba, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -146.00003
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576792924089796642, guid: 0b8de7ec1dd602e4c81c56bf590480ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 68de235a9561598439cd498640f33cc8, type: 3}
+    - target: {fileID: 5576792924350669134, guid: 0b8de7ec1dd602e4c81c56bf590480ba, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -292
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576792924480161054, guid: 0b8de7ec1dd602e4c81c56bf590480ba, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1eb15d1e7f1c4e047be4e7d13f5be5e5, type: 3}
+    - target: {fileID: 5576792924480161055, guid: 0b8de7ec1dd602e4c81c56bf590480ba, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1697.1428
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576792924480161055, guid: 0b8de7ec1dd602e4c81c56bf590480ba, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 407.71213
+      objectReference: {fileID: 0}
+    - target: {fileID: 5576792924480161055, guid: 0b8de7ec1dd602e4c81c56bf590480ba, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 123
+      objectReference: {fileID: 0}
     - target: {fileID: 5576792924525899924, guid: 0b8de7ec1dd602e4c81c56bf590480ba, type: 3}
       propertyPath: m_Name
       value: CanvasGameplay
